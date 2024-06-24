@@ -8,12 +8,18 @@
   Source of my website <a href="https://gautier-darchen.vercel.app/" target="_blank">gautier-darchen.vercel.app</a> built with <a href="https://nextjs.org/" target="_blank">Nextjs</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
 </p>
 
-<!-- TODO: pnpm, ci checks, protect branch, pr-template, commitlint/precommit hooks -->
+<!-- TODO: renovate, upgrade packages -->
 
+<div align="center">
 
-<!-- [![last commit](https://badgen.net/github/last-commit/gdarchen/portfolio?icon=https://simpleicons.now.sh/git/fff)](https://github.com/gdarchen/portfolio)
-[![yarn version](https://img.shields.io/badge/v1.22-4684B0.svg?logo=yarn&logoColor=white&label=Yarn)](https://yarnpkg.com/)
-[![node version](https://img.shields.io/badge/%3E=14.0.0-3C873A.svg?logo=node.js&logoColor=white&label=node)](https://nodejs.org/en/)
+<!-- TODO: uncomment when public -->
+<!-- [![last commit](https://badgen.net/github/last-commit/gdarchen/portfolio?icon=https://simpleicons.now.sh/git/fff)](https://github.com/gdarchen/portfolio) -->
+[![pnpm version](https://img.shields.io/badge/v9.4.0-F69220.svg?logo=pnpm&logoColor=white&label=pnpm)](https://pnpm.io/)
+[![node version](https://img.shields.io/badge/%3E=20.0.0-3C873A.svg?logo=node.js&logoColor=white&label=node)](https://nodejs.org/en/)
+
+</div>
+
+<!-- 
  -->
 
 ## ![demo](.README/home.png)
@@ -32,14 +38,13 @@ Here is how to setup the project locally to contribute:
    ```bash
    $ git clone git@github.com:gdarchen/portfolio.git
    ```
-   <!-- TODO: improve when yarn@4 or pnpm -->
-2. Install the dependencies using `yarn` as follows: TODO
+2. Install the dependencies using `pnpm` as follows:
    ```bash
-   $ yarn install
+   $ pnpm install
    ```
 3. Run the application locally:
    ```bash
-   $ yarn dev
+   $ pnpm dev
    ```
 
 ---
