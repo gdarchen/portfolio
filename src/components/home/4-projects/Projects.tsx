@@ -5,8 +5,6 @@ import ArrowIcon from '@/components/icons/ArrowIcon'
 import Project from './components/Project'
 import projects from './ProjectsList'
 
-// TODO: image PIC
-
 const Projects: FC = () => {
   return (
     <div

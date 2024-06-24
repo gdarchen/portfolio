@@ -11,6 +11,9 @@ import chronos3 from '/public/img/projects/ihmeChronos/chronos3.png'
 import chronos4 from '/public/img/projects/ihmeChronos/chronos4.png'
 import memory from '/public/img/projects/Memory/memory.png'
 import othello from '/public/img/projects/Othello/othello.png'
+import pic1 from '/public/img/projects/PIC/pic-1.png'
+import pic2 from '/public/img/projects/PIC/pic-2.png'
+import pic3 from '/public/img/projects/PIC/pic-3.png'
 import elec from '/public/img/projects/PortableConsole/console1.png'
 import reacli1 from '/public/img/projects/reacli/reacli1.png'
 import reacli2 from '/public/img/projects/reacli/reacli2.png'
@@ -180,6 +183,7 @@ const projects: Project[] = [
         </div>
       </>
     ),
+    images: [pic1.src, pic2.src, pic3.src],
     technologies: ['Symfony', 'Scrum', 'PHP', 'ELK'],
   },
   /* WhatsASI? */
