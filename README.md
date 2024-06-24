@@ -5,10 +5,10 @@
   <a href="https://gautier-darchen.vercel.app/">gautier-darchen.vercel.app</a>
 </h1>
 <p align="center">
-  Source of my website <a href="https://gautier-darchen.vercel.app/" target="_blank">gautier-darchen.vercel.app</a> built with <a href="https://nextjs.org/" target="_blank">Nextjs</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
+  Source of my website <a href="https://gautier-darchen.vercel.app/" target="_blank">gautier-darchen.vercel.app</a> built with <a href="https://nextjs.org/" target="_blank">Next</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
 </p>
 
-<!-- TODO: renovate, upgrade packages -->
+<!-- TODO: renovate -->
 
 <div align="center">
 
