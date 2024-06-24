@@ -30,13 +30,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Validate current commit with commitlint
-        if: github.event_name == 'push'
-        run: pnpm commitlint --last --verbose
-
-      - name: Validate PR commits with commitlint
-        if: github.event_name == 'pull_request'
-        run: pnpm commitlint --from ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }} --to ${{ github.event.pull_request.head.sha }} --verbose
-
       - name: Lint source code
         run: pnpm lint
