@@ -1,0 +1,60 @@
+import { FC, PropsWithChildren } from 'react'
+import { Metadata } from 'next'
+
+import { WEBSITE_URL } from '@/constants/globals'
+
+import './globals.css'
+import 'aos/dist/aos.css'
+
+type Props = PropsWithChildren
+
+const title = 'Gautier Darchen - Senior Software Engineer'
+const description =
+  'Passionate Senior Software Engineer who wants to have an impact on our society'
+const image = '/gdarchen-circle.png'
+
+export const metadata: Metadata = {
+  title,
+  description,
+  applicationName: "Gautier Darchen's portfolio",
+  authors: [{ name: 'Gautier Darchen', url: WEBSITE_URL }],
+  robots: 'index, follow',
+  twitter: {
+    card: 'summary_large_image',
+    site: '@gdarchen',
+    creator: '@gdarchen',
+    title,
+    images: image,
+  },
+  openGraph: {
+    type: 'website',
+    title,
+    description,
+    siteName: 'Gautier DARCHEN',
+    images: [{ url: image }],
+  },
+}
+
+const RootLayout: FC<Props> = ({ children }) => {
+  return (
+    <html lang="en">
+      <head>
+        {/* React Slick CSS */}
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+      </head>
+      <body>{children}</body>
+    </html>
+  )
+}
+
+export default RootLayout
