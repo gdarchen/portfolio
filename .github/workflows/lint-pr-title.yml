@@ -1,5 +1,9 @@
 name: Lint pull request title
 
+permissions:
+  pull-requests: read
+  statuses: write
+
 on:
   pull_request:
     types:
