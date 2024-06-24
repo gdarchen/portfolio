@@ -2,6 +2,7 @@ import { FC, PropsWithChildren } from 'react'
 import { Metadata } from 'next'
 
 import { WEBSITE_URL } from '@/constants/globals'
+import { Analytics } from "@vercel/analytics/react"
 
 import './globals.css'
 import 'aos/dist/aos.css'
@@ -52,7 +53,10 @@ const RootLayout: FC<Props> = ({ children }) => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
