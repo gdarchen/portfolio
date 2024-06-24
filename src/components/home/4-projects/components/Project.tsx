@@ -348,20 +348,20 @@ const Project: FC<Props> = ({ project, index }) => {
 
           {(project.video ||
             (project.images && project.images?.length > 0)) && (
-            <div className="z-10 flex w-full items-center justify-center sm:hidden">
-              <Button onClick={onOpenMediaModal} className={button()}>
-                {project.video ? (
-                  <>
-                    <FaVideo /> Watch video
-                  </>
-                ) : (
-                  <>
-                    <BiCarousel /> View gallery
-                  </>
-                )}
-              </Button>
-            </div>
-          )}
+              <div className="z-10 flex w-full items-center justify-center sm:hidden">
+                <Button onClick={onOpenMediaModal} className={button()}>
+                  {project.video ? (
+                    <>
+                      <FaVideo /> Watch video
+                    </>
+                  ) : (
+                    <>
+                      <BiCarousel /> View gallery
+                    </>
+                  )}
+                </Button>
+              </div>
+            )}
         </div>
       </div>
     </div>
