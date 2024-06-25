@@ -64,7 +64,7 @@ const MyName: FC = () => {
       >
         <a href="/resume.pdf" target="_blank" rel="noreferrer">
           <button className="rounded border border-primary bg-background px-4 py-3 text-primary sm:px-8 sm:py-4">
-            Check out my resume!
+            Download my resume
           </button>
         </a>
       </motion.div>

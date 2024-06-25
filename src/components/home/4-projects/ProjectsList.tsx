@@ -131,7 +131,7 @@ const projects: Project[] = [
         </div>
       </>
     ),
-    technologies: ['React-Native', 'Javascript', 'Dialogflow', 'Node.js'],
+    technologies: ['React-Native', 'JavaScript', 'Dialogflow', 'Node.js'],
     images: [chronos1.src, chronos2.src, chronos3.src, chronos4.src],
     github: 'https://github.com/alexandre-lelain/ihme-agent-assistant',
   },
@@ -306,7 +306,7 @@ const projects: Project[] = [
     description: (
       <div>
         In language C and using the V-Model, set up a version of the{' '}
-        <span className="text-primary">Othello</span>
+        <span className="text-primary">Othello</span>{' '}
         game with an artificial intelligence (AI) with the Min-Max algorithm.
       </div>
     ),
