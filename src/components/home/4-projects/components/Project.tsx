@@ -36,7 +36,7 @@ const iconLink = tv({
 })
 
 const button = tv({
-  base: 'inline-flex items-center gap-2 rounded-md bg-primary-500 px-3 py-1 text-sm font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-600 data-[open]:bg-gray-700 data-[focus]:outline-1 data-[focus]:outline-white',
+  base: 'inline-flex items-center gap-2 rounded-md bg-primary-500 px-3 py-1 text-sm font-semibold text-white shadow-inner shadow-white/10 data-[hover]:bg-gray-600 data-[open]:bg-gray-700 data-[focus]:outline-1 data-[focus]:outline-white focus:outline-none',
 })
 
 type ProjectGalleryModalProps = {
@@ -232,7 +232,7 @@ const Project: FC<Props> = ({ project, index }) => {
           </div>
 
           <div className="z-10 w-full rounded-md py-2 opacity-90 shadow shadow-backgound-secondary md:bg-backgound-secondary md:p-6">
-            <span className="text-justify font-content text-xs text-gray-300 md:text-sm md:text-gray-400">
+            <span className="text-justify font-content text-sm text-gray-300 md:text-gray-400">
               {project.description}
             </span>
 

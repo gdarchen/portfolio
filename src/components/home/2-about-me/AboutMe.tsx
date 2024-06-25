@@ -114,7 +114,7 @@ const AboutMe: FC = () => {
                         key={tech}
                         className="flex flex-row items-center space-x-2"
                       >
-                        <ArrowIcon className="size-3 text-primary" />
+                        <ArrowIcon className="size-4 text-primary" />
                         <span className="text-xs text-gray-400 sm:text-sm">
                           {tech}
                         </span>
@@ -132,7 +132,7 @@ const AboutMe: FC = () => {
                         key={tech}
                         className="flex flex-row items-center space-x-2"
                       >
-                        <ArrowIcon className="size-3 text-primary" />
+                        <ArrowIcon className="size-4 text-primary" />
                         <span className="text-xs text-gray-400 sm:text-sm">
                           {tech}
                         </span>

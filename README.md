@@ -8,9 +8,9 @@
   Source of my website <a href="https://gautier-darchen.vercel.app/" target="_blank">gautier-darchen.vercel.app</a> built with <a href="https://nextjs.org/" target="_blank">Next</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
 </p>
 
-<!-- TODO: renovate -->
-
 <div align="center">
+
+<!-- TODO: change picture, skills -->
 
 <!-- TODO: uncomment when public -->
 <!-- [![last commit](https://badgen.net/github/last-commit/gdarchen/portfolio?icon=https://simpleicons.now.sh/git/fff)](https://github.com/gdarchen/portfolio) -->

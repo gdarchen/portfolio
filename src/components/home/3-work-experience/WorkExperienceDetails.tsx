@@ -42,7 +42,6 @@ const WorkExperienceDetails: FC<Props> = ({ experience }) => {
         {experience.link && (
           <span
             className="font-mono text-xs text-primary hover:cursor-pointer"
-            style={{ fontSize: '0.6rem' }}
             onClick={() => window.open(experience.link, '_blank')}
           >
             {experience.link.split('://')[1]}
@@ -50,9 +49,9 @@ const WorkExperienceDetails: FC<Props> = ({ experience }) => {
         )}
       </div>
 
-      <div className="flex flex-col space-y-4 text-xs sm:text-sm">
+      <div className="flex flex-col space-y-4">
         {/* Description */}
-        <span className="font-header text-xs text-gray-300 sm:text-sm">
+        <span className="font-header text-sm text-gray-300">
           {experience.description}
         </span>
       </div>

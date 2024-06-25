@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   applicationName: "Gautier Darchen's portfolio",
   authors: [{ name: 'Gautier Darchen', url: WEBSITE_URL }],
   robots: 'index, follow',
+  metadataBase: new URL(WEBSITE_URL),
   twitter: {
     card: 'summary_large_image',
     site: '@gdarchen',
