@@ -22,7 +22,7 @@ const GetInTouch: FC = () => {
         <div className="flex flex-row items-center space-x-2">
           <span className="font-sans text-sm text-primary sm:text-base">
             {' '}
-            04.
+            05.
           </span>
           <span className="font-sans text-base text-primary">Contact</span>
         </div>
