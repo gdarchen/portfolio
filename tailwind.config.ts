@@ -34,8 +34,10 @@ export default {
         },
         secondary: colors.blue[200],
         'mobile-menu': '#0f141d',
-        background: '#03080f',
-        "backgound-secondary": '#112340',
+        background: {
+          DEFAULT: '#03080f',
+          secondary: '#112340',
+        },
         hovered: '#153040',
       },
       screens: {

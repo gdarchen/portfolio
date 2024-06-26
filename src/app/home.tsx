@@ -9,7 +9,8 @@ import MyName from '@/components/home/1-my-name/MyName'
 import AboutMe from '@/components/home/2-about-me/AboutMe'
 import WorkExperience from '@/components/home/3-work-experience/WorkExperience'
 import Projects from '@/components/home/4-projects/Projects'
-import GetInTouch from '@/components/home/5-get-in-touch/GetInTouch'
+import Skills from '@/components/home/5-skills/Skills'
+import GetInTouch from '@/components/home/6-get-in-touch/GetInTouch'
 import SocialMediaAround from '@/components/home/social-media-around/SocialMediaAround'
 import ScreenSizeDetector from '@/components/screen-size-detector/ScreenSizeDetector'
 
@@ -28,6 +29,7 @@ const Home: FC = () => {
       <AboutMe />
       <WorkExperience />
       <Projects />
+      <Skills />
       <GetInTouch />
       <Footer />
       {!isProd && <ScreenSizeDetector />}

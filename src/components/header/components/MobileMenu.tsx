@@ -26,7 +26,7 @@ const MobileMenu: FC<Props> = ({ hidden, onClose }) => {
       initial={{ x: '100%' }}
       animate={hidden ? { x: '100%' } : { x: '0' }}
       transition={{ x: { duration: 0.4 } }}
-      className="fixed z-20 flex h-screen w-full duration-300 md:hidden"
+      className="fixed z-20 flex h-dvh w-full duration-300 md:hidden"
     >
       <div
         onClick={onClose}
@@ -64,13 +64,26 @@ const MobileMenu: FC<Props> = ({ hidden, onClose }) => {
           to="projects"
           spy
           smooth
-          offset={100}
+          offset={-100}
           duration={200}
           onClick={onClose}
           className={menuItemLink()}
         >
           <span className={menuItemDigit()}>03.</span>
           <span className={menuItemText()}>Projects</span>
+        </Link>
+
+        <Link
+          to="skills"
+          spy
+          smooth
+          offset={0}
+          duration={200}
+          onClick={onClose}
+          className={menuItemLink()}
+        >
+          <span className={menuItemDigit()}>04.</span>
+          <span className={menuItemText()}>Skills</span>
         </Link>
 
         <Link
@@ -82,7 +95,7 @@ const MobileMenu: FC<Props> = ({ hidden, onClose }) => {
           onClick={onClose}
           className={menuItemLink()}
         >
-          <span className={menuItemDigit()}>04.</span>
+          <span className={menuItemDigit()}>05.</span>
           <span className={menuItemText()}>Contact</span>
         </Link>
 

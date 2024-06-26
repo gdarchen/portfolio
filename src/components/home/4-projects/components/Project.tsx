@@ -231,7 +231,7 @@ const Project: FC<Props> = ({ project, index }) => {
             </a>
           </div>
 
-          <div className="z-10 w-full rounded-md py-2 opacity-90 shadow shadow-backgound-secondary md:bg-backgound-secondary md:p-6">
+          <div className="z-10 w-full rounded-md py-2 opacity-90 shadow shadow-background-secondary md:bg-background-secondary md:p-6">
             <span className="text-justify font-content text-sm text-gray-300 md:text-gray-400">
               {project.description}
             </span>

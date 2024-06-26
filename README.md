@@ -10,7 +10,7 @@
 
 <div align="center">
 
-<!-- TODO: change picture, skills -->
+<!-- TODO: profile README (and dynamic svg) -->
 
 <!-- TODO: uncomment when public -->
 <!-- [![last commit](https://badgen.net/github/last-commit/gdarchen/portfolio?icon=https://simpleicons.now.sh/git/fff)](https://github.com/gdarchen/portfolio) -->

@@ -9,7 +9,7 @@ const Projects: FC = () => {
   return (
     <div
       id="projects"
-      className="flex w-full flex-col space-y-12 px-4 py-12 sm:px-16 md:px-16 md:py-32 lg:px-24 xl:space-y-28 2xl:px-72"
+      className="flex w-full flex-col space-y-12 p-4 sm:px-16 md:px-16 md:py-12 lg:px-24 xl:space-y-28 2xl:px-72"
     >
       {/* Title */}
       <div data-aos="fade-up" className="flex flex-row items-center md:px-0">

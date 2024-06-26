@@ -63,7 +63,24 @@ export default function DesktopMenu() {
       <motion.span
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ type: 'spring', duration: 1.2, delay: 1 }}
+        transition={{ type: 'spring', duration: 1.2, delay: 0.9 }}
+        className="text-primary"
+      >
+        <ReactScrollLink
+          to="skills"
+          spy
+          smooth
+          offset={-100}
+          duration={200}
+        >
+          &gt; 04. <span className={menuItem()}>Skills</span>
+        </ReactScrollLink>
+      </motion.span>
+
+      <motion.span
+        initial={{ y: -40, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ type: 'spring', duration: 1.2, delay: 1.2 }}
         className="text-primary"
       >
         <ReactScrollLink
@@ -73,7 +90,7 @@ export default function DesktopMenu() {
           offset={-100}
           duration={200}
         >
-          &gt; 04. <span className={menuItem()}>Contact</span>
+          &gt; 05. <span className={menuItem()}>Contact</span>
         </ReactScrollLink>
       </motion.span>
 

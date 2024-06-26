@@ -35,7 +35,7 @@ const AboutMe: FC = () => {
           <div className="w-full space-y-4 text-justify text-sm md:w-7/12">
             <div className="font-header">
               <span className="text-gray-400">
-                As a Senior Engineer, I really love new technologies and the
+                As a Senior Software Engineer, I really love new technologies and the
                 challenges they represent in our current society. I particularly
                 enjoy web development and DevOps activities.
               </span>
