@@ -15,20 +15,22 @@ const AboutMe: FC = () => {
       data-aos="fade-up"
       className="flex snap-start flex-col items-center py-20"
     >
-      {/* Title */}
       <div className="flex w-full flex-col space-y-8 px-4 sm:w-[500px] sm:px-0 md:w-[700px] lg:w-[900px]">
-        <div className="flex flex-row items-center">
-          <div className="mr-4 flex flex-row items-center">
-            <ArrowIcon className="size-4 flex-none translate-y-[0.5px] text-primary md:h-6 md:w-5" />
-            <span className="font-header text-sm text-primary sm:text-xl">
+        {/* Title */}
+        <section className="flex flex-row items-center">
+          <div className="flex flex-row items-center">
+            <ArrowIcon className="size-4 flex-none text-primary md:h-6 md:w-5" />
+            <span className="font-sans text-sm text-primary sm:text-xl">
+              {' '}
               01.
             </span>
-            <span className="flex-none pl-4 text-lg font-bold tracking-wider text-gray-200 opacity-85 sm:text-2xl">
-              About Me
-            </span>
           </div>
-          <div className="ml-4 h-[0.2px] w-full bg-gray-400 sm:w-72" />
-        </div>
+
+          <span className="text-nowrap px-3 text-lg font-bold tracking-wider text-gray-200 opacity-85 md:text-2xl">
+            About Me
+          </span>
+          <div className="h-[0.2px] w-full bg-gray-400 sm:w-44 lg:w-80" />
+        </section>
 
         {/* Description */}
         <div className="flex w-full flex-col space-y-8 sm:space-x-2 md:flex-row md:space-x-8 md:space-y-0">

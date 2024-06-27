@@ -59,11 +59,11 @@ a {
 }
 
 .slick-prev {
-  @apply md:!translate-x-[130px];
+  @apply md:!translate-x-[100px] lg:!translate-x-[130px];
 }
 
 .slick-next {
-  @apply md:!-translate-x-[180px];
+  @apply md:!-translate-x-[150px] lg:!-translate-x-[180px];
 }
 
 .slick-slide img {

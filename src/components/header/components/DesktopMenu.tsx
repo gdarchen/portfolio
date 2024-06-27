@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { motion } from 'framer-motion'
 import { Link as ReactScrollLink } from 'react-scroll'
 import { tv } from 'tailwind-variants'
@@ -7,9 +7,9 @@ const menuItem = tv({
   base: 'text-white duration-300 hover:cursor-pointer hover:text-blue-800',
 })
 
-export default function DesktopMenu() {
+const DesktopMenu: FC = () => {
   return (
-    <div className="hidden flex-row items-center space-x-8 font-mono text-xs md:flex">
+    <div className="hidden flex-row items-center space-x-4 font-mono text-xs md:flex lg:space-x-8">
       <motion.div
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -107,3 +107,5 @@ export default function DesktopMenu() {
     </div>
   )
 }
+
+export default DesktopMenu
