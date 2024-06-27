@@ -39,7 +39,7 @@ const WorkExperienceTabs: FC<ExperiencesTabsProps> = ({
           onTabClick(name)
         }}
         className={clsx(
-          'w-32 flex-none cursor-pointer rounded py-3 text-center font-mono text-xs duration-500 hover:bg-hovered hover:text-primary sm:text-sm md:w-64 md:px-4 md:pl-6 md:text-left',
+          'w-32 flex-none cursor-pointer rounded py-3 text-center font-mono text-xs duration-500 hover:bg-hovered hover:text-primary sm:text-sm md:w-60 md:px-4 md:pl-6 md:text-left lg:w-64',
           isActive ? 'bg-hovered text-primary' : 'text-gray-500',
         )}
       >
@@ -51,7 +51,7 @@ const WorkExperienceTabs: FC<ExperiencesTabsProps> = ({
   return (
     <div
       id="work-experience"
-      className="flex w-screen flex-col items-start justify-start overflow-auto pb-4 scrollbar-hide sm:items-center sm:justify-center md:flex-row md:overflow-hidden md:pb-0 lg:w-auto"
+      className="flex w-screen flex-col items-start justify-start overflow-auto pb-4 scrollbar-hide sm:items-center sm:justify-center md:w-3/5 md:flex-row md:overflow-hidden md:pb-0 lg:w-auto"
     >
       {/* Left bar Holder */}
       <div

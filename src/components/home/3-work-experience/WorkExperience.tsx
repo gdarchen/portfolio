@@ -35,16 +35,16 @@ const WorkExperience: FC = () => {
         </div>
 
         <span className="px-3 text-lg font-bold tracking-wider text-gray-200 opacity-85 md:text-2xl">
-          <span className="hidden md:inline">
+          <span className="hidden text-nowrap md:inline">
             Work experience &amp; Education
           </span>
-          <span className="inline md:hidden">Experience &amp; Education</span>
+          <span className="inline text-nowrap md:hidden">Experience &amp; Education</span>
         </span>
-        <div className="h-[0.2px] w-16 bg-gray-400 sm:w-44 md:w-80" />
+        <div className="h-[0.2px] w-full min-w-16 bg-gray-400 sm:w-44 lg:w-80" />
       </section>
 
       {/* Experiences */}
-      <section className="flex w-full flex-col items-center justify-center space-y-4 md:flex-row md:items-start md:justify-center md:space-x-4 md:space-y-0">
+      <section className="flex w-full flex-col items-center justify-center space-y-4 md:flex-row md:items-start md:justify-center md:space-x-4 md:space-y-0 md:max-lg:w-5/6">
         {/* Tabs */}
         <WorkExperienceTabs activeTab={tab} onTabClick={setTab} />
 

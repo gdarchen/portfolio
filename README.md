@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src=".README/logo.png" width="100" />
+  <a href="https://gautier-darchen.vercel.app/"><img alt="Logo" src=".README/logo.png" width="100" /></a>
 </div>
 <h1 align="center">
   <a href="https://gautier-darchen.vercel.app/">gautier-darchen.vercel.app</a>
@@ -10,6 +10,7 @@
 
 <div align="center">
 
+<!-- TODO: update screenshot in README (new skills section + Contentsquare, not Swile) -->
 <!-- TODO: profile README (and dynamic svg) -->
 
 <!-- TODO: uncomment when public -->
@@ -19,10 +20,8 @@
 
 </div>
 
-<!-- 
- -->
 
-## ![demo](.README/home.png)
+  <a href="https://gautier-darchen.vercel.app/"><img alt="Logo" src=".README/home.png" /></a>
 
 ## 👋 About this repo
 

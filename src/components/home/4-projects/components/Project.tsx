@@ -115,7 +115,7 @@ const ProjectGalleryModal: FC<ProjectGalleryModalProps> = ({
 const Project: FC<Props> = ({ project, index }) => {
   const [isMediaModalOpened, setIsMediaModalOpened] = useState(false)
 
-  const isRightMedia = index % 2 !== 0
+  const isLeftMedia = index % 2 !== 0
   const mainLink =
     project.npm ??
     project.website ??
@@ -134,7 +134,7 @@ const Project: FC<Props> = ({ project, index }) => {
   return (
     <div
       data-aos="fade-up"
-      className="relative w-full md:grid md:h-96 md:grid-cols-12"
+      className="relative w-full md:grid md:h-96 md:grid-cols-12 md:max-lg:first:mt-24"
     >
       <ProjectGalleryModal
         project={project}
@@ -146,7 +146,7 @@ const Project: FC<Props> = ({ project, index }) => {
         <div
           className={clsx(
             'relative col-span-7 size-full rounded',
-            isRightMedia && 'col-start-6',
+            isLeftMedia && 'col-start-6',
           )}
         >
           <a href={mainLink} target="_blank" rel="noreferrer">
@@ -178,7 +178,7 @@ const Project: FC<Props> = ({ project, index }) => {
         <div
           className={clsx(
             'absolute z-0 size-full',
-            isRightMedia && 'md:order-2',
+            isLeftMedia && 'md:order-2',
           )}
         >
           <div className="relative size-full">
@@ -202,7 +202,7 @@ const Project: FC<Props> = ({ project, index }) => {
         <div
           className={clsx(
             'col-span-8 flex flex-col items-start space-y-2 px-4 pt-4 sm:pt-12 md:space-y-3 md:py-0 xl:col-span-6',
-            isRightMedia
+            isLeftMedia
               ? 'col-span-8 md:order-1 xl:col-span-6'
               : 'col-start-5 md:items-end xl:col-start-7',
           )}
@@ -210,7 +210,7 @@ const Project: FC<Props> = ({ project, index }) => {
           <div
             className={clsx(
               'z-10 flex flex-col space-y-1',
-              isRightMedia ? 'items-start' : 'md:items-end',
+              isLeftMedia ? 'items-start' : 'md:items-end',
             )}
           >
             {/* Dates */}
@@ -260,7 +260,7 @@ const Project: FC<Props> = ({ project, index }) => {
             <div
               className={clsx(
                 'flex w-full flex-wrap font-content text-sm text-gray-300 md:text-gray-400',
-                isRightMedia ? 'md:justify-start' : 'md:justify-end',
+                isLeftMedia ? 'md:justify-start' : 'md:justify-end',
               )}
             >
               {project.technologies.map((tech) => {
@@ -280,7 +280,7 @@ const Project: FC<Props> = ({ project, index }) => {
           <div
             className={clsx(
               'z-10 flex space-x-5',
-              isRightMedia ? 'flex-row-reverse space-x-reverse' : 'flex-row',
+              isLeftMedia ? 'flex-row-reverse space-x-reverse' : 'flex-row',
             )}
           >
             {project.talk && (
