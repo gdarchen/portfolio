@@ -60,7 +60,7 @@ const WatchResources: FC<Props> = ({ initialResources, initialNextPage }) => {
                   <h4 className="font-header text-base font-medium text-secondary">
                     {week}
                   </h4>
-                  <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
+                  <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
                     {resources.map((res) => {
                       return <WatchResource key={res.id} resource={res} />
                     })}
