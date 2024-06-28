@@ -306,8 +306,8 @@ const projects: Project[] = [
     description: (
       <div>
         In language C and using the V-Model, set up a version of the{' '}
-        <span className="text-primary">Othello</span>{' '}
-        game with an artificial intelligence (AI) with the Min-Max algorithm.
+        <span className="text-primary">Othello</span> game with an artificial
+        intelligence (AI) with the Min-Max algorithm.
       </div>
     ),
     technologies: ['C', 'Min-max', 'AI', 'V-Model'],

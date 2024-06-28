@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-import { DiScrum } from 'react-icons/di';
+import { ReactNode } from 'react'
+import { DiScrum } from 'react-icons/di'
 import {
   FaAirbnb,
   FaAngular,
@@ -21,7 +21,7 @@ import {
   FaReact,
   FaSass,
   FaWindows,
-} from 'react-icons/fa';
+} from 'react-icons/fa'
 import {
   SiApachemaven,
   SiC,
@@ -45,15 +45,15 @@ import {
   SiVite,
   SiWebpack,
   SiYarn,
-} from 'react-icons/si';
+} from 'react-icons/si'
 
 type Skill = {
-  text: string;
-  icon: ReactNode;
-};
+  text: string
+  icon: ReactNode
+}
 
 type SkillsByLevel = Array<{
-  title: string;
+  title: string
   skills: Skill[]
   className?: string
 }>
@@ -91,7 +91,7 @@ const advancedSkills: Skill[] = [
   { text: 'Scrum', icon: <DiScrum /> },
   { text: 'TDD', icon: <FaCheckCircle /> },
   { text: 'SQL', icon: <SiPostgresql /> },
-];
+]
 
 const intermediateSkills: Skill[] = [
   { text: 'Angular', icon: <FaAngular /> },
@@ -105,9 +105,13 @@ const intermediateSkills: Skill[] = [
   { text: 'Neo4j', icon: <SiNeo4J /> },
   { text: 'FFmpeg', icon: <SiFfmpeg /> },
   { text: 'Lottie', icon: <FaAirbnb /> },
-];
+]
 
 export const skillsByLevel: SkillsByLevel = [
-  { title: "Advanced", skills: advancedSkills, className: "grow md:[&>div]:grid-cols-10" },
-  { title: 'Intermediate', skills: intermediateSkills }
+  {
+    title: 'Advanced',
+    skills: advancedSkills,
+    className: 'grow md:[&>div]:grid-cols-10',
+  },
+  { title: 'Intermediate', skills: intermediateSkills },
 ]

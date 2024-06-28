@@ -1,8 +1,10 @@
 import { FC, PropsWithChildren } from 'react'
 import { Metadata } from 'next'
 
+import Header from '@/components/header/Header'
+import ScreenSizeDetector from '@/components/screen-size-detector/ScreenSizeDetector'
 import { WEBSITE_URL } from '@/constants/globals'
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from '@vercel/analytics/react'
 
 import './globals.css'
 import 'aos/dist/aos.css'
@@ -38,6 +40,8 @@ export const metadata: Metadata = {
 }
 
 const RootLayout: FC<Props> = ({ children }) => {
+  const isProd = process.env.NODE_ENV === 'production'
+
   return (
     <html lang="en">
       <head>
@@ -55,8 +59,12 @@ const RootLayout: FC<Props> = ({ children }) => {
         />
       </head>
       <body>
-        {children}
+        <div className="relative min-h-screen w-full snap-mandatory bg-background">
+          <Header />
+          {children}
+        </div>
         <Analytics />
+        {!isProd && <ScreenSizeDetector />}
       </body>
     </html>
   )
