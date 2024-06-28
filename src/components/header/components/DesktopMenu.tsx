@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Link as ReactScrollLink } from 'react-scroll'
 import { tv } from 'tailwind-variants'
 
 const menuItem = tv({
@@ -9,21 +9,15 @@ const menuItem = tv({
 
 const DesktopMenu: FC = () => {
   return (
-    <div className="hidden flex-row items-center space-x-4 font-mono text-xs md:flex lg:space-x-8">
+    <div className="hidden flex-row items-center space-x-4 font-mono text-xs lg:flex lg:space-x-8">
       <motion.div
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: 'spring', duration: 1.2, delay: 0.4 }}
       >
-        <ReactScrollLink
-          to="about-me"
-          spy
-          smooth
-          offset={-100}
-          duration={200}
-        >
+        <Link href="/#about-me">
           &gt; 01. <span className={menuItem()}>About</span>
-        </ReactScrollLink>
+        </Link>
       </motion.div>
 
       <motion.div
@@ -32,15 +26,9 @@ const DesktopMenu: FC = () => {
         transition={{ type: 'spring', duration: 1.2, delay: 0.7 }}
         className="text-primary"
       >
-        <ReactScrollLink
-          to="work-experience"
-          spy
-          smooth
-          offset={-300}
-          duration={200}
-        >
+        <Link href="/#work-experience">
           &gt; 02. <span className={menuItem()}>Experience</span>
-        </ReactScrollLink>
+        </Link>
       </motion.div>
 
       <motion.div
@@ -49,15 +37,9 @@ const DesktopMenu: FC = () => {
         transition={{ type: 'spring', duration: 1.2, delay: 0.8 }}
         className="text-primary"
       >
-        <ReactScrollLink
-          to="projects"
-          spy
-          smooth
-          offset={-100}
-          duration={200}
-        >
+        <Link href="/#projects">
           &gt; 03. <span className={menuItem()}>Projects</span>
-        </ReactScrollLink>
+        </Link>
       </motion.div>
 
       <motion.span
@@ -66,15 +48,9 @@ const DesktopMenu: FC = () => {
         transition={{ type: 'spring', duration: 1.2, delay: 0.9 }}
         className="text-primary"
       >
-        <ReactScrollLink
-          to="skills"
-          spy
-          smooth
-          offset={-100}
-          duration={200}
-        >
+        <Link href="/#skills">
           &gt; 04. <span className={menuItem()}>Skills</span>
-        </ReactScrollLink>
+        </Link>
       </motion.span>
 
       <motion.span
@@ -83,15 +59,20 @@ const DesktopMenu: FC = () => {
         transition={{ type: 'spring', duration: 1.2, delay: 1.2 }}
         className="text-primary"
       >
-        <ReactScrollLink
-          to="contact"
-          spy
-          smooth
-          offset={-100}
-          duration={200}
-        >
+        <Link href="/#contact">
           &gt; 05. <span className={menuItem()}>Contact</span>
-        </ReactScrollLink>
+        </Link>
+      </motion.span>
+
+      <motion.span
+        initial={{ y: -40, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ type: 'spring', duration: 1.2, delay: 1.3 }}
+        className="text-primary"
+      >
+        <Link href="/watch">
+          &gt; <span className={menuItem()}>Tech. watch</span>
+        </Link>
       </motion.span>
 
       <a href="/resume.pdf" target="_blank" rel="noreferrer">

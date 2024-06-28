@@ -23,6 +23,7 @@ const WorkExperience: FC = () => {
     <div
       data-aos="fade-up"
       className="flex flex-col items-center justify-center space-y-12 py-12 md:py-24"
+      id="work-experience"
     >
       {/* Title */}
       <section className="flex flex-row items-center">
@@ -38,7 +39,9 @@ const WorkExperience: FC = () => {
           <span className="hidden text-nowrap md:inline">
             Work experience &amp; Education
           </span>
-          <span className="inline text-nowrap md:hidden">Experience &amp; Education</span>
+          <span className="inline text-nowrap md:hidden">
+            Experience &amp; Education
+          </span>
         </span>
         <div className="h-[0.2px] w-full min-w-16 bg-gray-400 sm:w-44 lg:w-80" />
       </section>

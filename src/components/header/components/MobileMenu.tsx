@@ -1,6 +1,6 @@
 import { FC } from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Link } from 'react-scroll'
 import { tv } from 'tailwind-variants'
 
 type Props = {
@@ -26,7 +26,7 @@ const MobileMenu: FC<Props> = ({ hidden, onClose }) => {
       initial={{ x: '100%' }}
       animate={hidden ? { x: '100%' } : { x: '0' }}
       transition={{ x: { duration: 0.4 } }}
-      className="fixed z-20 flex h-dvh w-full duration-300 md:hidden"
+      className="fixed z-20 flex h-dvh w-full duration-300 lg:hidden"
     >
       <div
         onClick={onClose}
@@ -34,25 +34,13 @@ const MobileMenu: FC<Props> = ({ hidden, onClose }) => {
       />
 
       <div className="flex h-full w-3/4 flex-col items-center justify-center space-y-8 bg-mobile-menu font-sans">
-        <Link
-          to="about-me"
-          spy
-          smooth
-          offset={-50}
-          duration={200}
-          onClick={onClose}
-          className={menuItemLink()}
-        >
+        <Link href="/#about-me" onClick={onClose} className={menuItemLink()}>
           <span className={menuItemDigit()}>01.</span>
           <span className={menuItemText()}>About</span>
         </Link>
 
         <Link
-          to="work-experience"
-          spy
-          smooth
-          offset={-250}
-          duration={200}
+          href="/#work-experience"
           onClick={onClose}
           className={menuItemLink()}
         >
@@ -60,43 +48,28 @@ const MobileMenu: FC<Props> = ({ hidden, onClose }) => {
           <span className={menuItemText()}>Experience</span>
         </Link>
 
-        <Link
-          to="projects"
-          spy
-          smooth
-          offset={-100}
-          duration={200}
-          onClick={onClose}
-          className={menuItemLink()}
-        >
+        <Link href="/#projects" onClick={onClose} className={menuItemLink()}>
           <span className={menuItemDigit()}>03.</span>
           <span className={menuItemText()}>Projects</span>
         </Link>
 
-        <Link
-          to="skills"
-          spy
-          smooth
-          offset={0}
-          duration={200}
-          onClick={onClose}
-          className={menuItemLink()}
-        >
+        <Link href="/#skills" onClick={onClose} className={menuItemLink()}>
           <span className={menuItemDigit()}>04.</span>
           <span className={menuItemText()}>Skills</span>
         </Link>
 
-        <Link
-          to="contact"
-          spy
-          smooth
-          offset={100}
-          duration={200}
-          onClick={onClose}
-          className={menuItemLink()}
-        >
+        <Link href="/#contact" onClick={onClose} className={menuItemLink()}>
           <span className={menuItemDigit()}>05.</span>
           <span className={menuItemText()}>Contact</span>
+        </Link>
+
+        <Link
+          href="/watch"
+          onClick={onClose}
+          className={menuItemLink({ className: 'text-xl' })}
+        >
+          <span className={menuItemDigit()}>Tech.</span>
+          <span className={menuItemText()}>Watch resources</span>
         </Link>
 
         <a href="/resume.pdf" target="_blank" rel="noreferrer">

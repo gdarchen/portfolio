@@ -49,10 +49,7 @@ const WorkExperienceTabs: FC<ExperiencesTabsProps> = ({
   }
 
   return (
-    <div
-      id="work-experience"
-      className="flex w-screen flex-col items-start justify-start overflow-auto pb-4 scrollbar-hide sm:items-center sm:justify-center md:w-3/5 md:flex-row md:overflow-hidden md:pb-0 lg:w-auto"
-    >
+    <div className="flex w-screen flex-col items-start justify-start overflow-auto pb-4 scrollbar-hide sm:items-center sm:justify-center md:w-3/5 md:flex-row md:overflow-hidden md:pb-0 lg:w-auto">
       {/* Left bar Holder */}
       <div
         className="relative order-2 hidden h-0.5 w-[34px] translate-y-1 rounded bg-gray-500 md:order-1 md:block md:h-[var(--height)] md:w-0.5"

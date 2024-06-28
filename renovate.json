@@ -15,7 +15,13 @@
       "stabilityDays": 3,
       "matchDatasources": ["npm"],
       "automerge": true,
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest", "lockFileMaintenance"]
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest",
+        "lockFileMaintenance"
+      ]
     },
     {
       "matchDatasources": ["orb"],

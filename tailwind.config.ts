@@ -1,10 +1,8 @@
 import type { Config } from 'tailwindcss'
-import colors from "tailwindcss/colors"
+import colors from 'tailwindcss/colors'
 
 export default {
-  content: [
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     rotate: {
       '-180': '-180deg',
@@ -56,5 +54,4 @@ export default {
   variants: {
     scrollbar: ['rounded'],
   },
-} satisfies Config;
-
+} satisfies Config
