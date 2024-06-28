@@ -6,6 +6,8 @@ import { fetchWatchPages } from '@/lib/notion'
 import { transformWatchResourceToDTO } from './dto/watchResource.dto'
 import WatchResources from './watchResources'
 
+export const revalidate = 3600
+
 export default async function Page() {
   const firstPage = await fetchWatchPages()
   const initialResources = firstPage.results.map(transformWatchResourceToDTO)
