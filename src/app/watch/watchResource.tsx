@@ -34,7 +34,8 @@ const ResourceType: FC<{ type: WatchResource['type'] }> = ({ type }) => {
 
 const WatchResource: FC<Props> = ({ resource }) => {
   const { title, tldr, source, subSource, url, type } = resource
-  const tldrWithDot = tldr?.endsWith('.') ? tldr : `${tldr}.`
+  const trimedTldr = tldr?.trim()
+  const tldrWithDot = trimedTldr?.endsWith('.') ? trimedTldr : `${trimedTldr}.`
 
   return (
     <a
@@ -48,7 +49,7 @@ const WatchResource: FC<Props> = ({ resource }) => {
           {title}
         </h5>
         <div className="grid grid-cols-6 gap-4 font-normal text-gray-700 dark:text-gray-400">
-          <div className="col-span-6 line-clamp-4 text-justify font-mono text-xs md:line-clamp-6">
+          <div className="col-span-6 line-clamp-4 text-left font-mono text-xs md:line-clamp-6 md:text-justify">
             {tldrWithDot}
           </div>
         </div>
