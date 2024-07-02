@@ -1,11 +1,11 @@
 <div align="center">
-  <a href="https://gautier-darchen.vercel.app/"><img alt="Logo" src=".README/logo.png" width="100" /></a>
+  <a href="https://gautierdarchen.fr"><img alt="Logo" src=".README/logo.png" width="100" /></a>
 </div>
 <h1 align="center">
-  <a href="https://gautier-darchen.vercel.app/">gautier-darchen.vercel.app</a>
+  <a href="https://gautierdarchen.fr">gautierdarchen.fr</a>
 </h1>
 <p align="center">
-  Source of my website <a href="https://gautier-darchen.vercel.app/" target="_blank">gautier-darchen.vercel.app</a> built with <a href="https://nextjs.org/" target="_blank">Next</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
+  Source of my website <a href="https://gautierdarchen.fr" target="_blank">gautierdarchen.fr</a> built with <a href="https://nextjs.org/" target="_blank">Next</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
 </p>
 
 <div align="center">
@@ -21,7 +21,7 @@
 
 </div>
 
-<a href="https://gautier-darchen.vercel.app/"><img alt="Logo" src=".README/home.png" /></a>
+<a href="https://gautierdarchen.fr/"><img alt="Logo" src=".README/home.png" /></a>
 
 ## 👋 About this repo
 
@@ -59,4 +59,4 @@ When this pull request will be merged, a new version will be deployed in product
 ## 📣 Author Info
 
 - Linkedin - [@gautierdarchen](https://www.linkedin.com/in/gautierdarchen/)
-- Website - [Gautier Darchen](https://gautier-darchen.vercel.app/)
+- Website - [Gautier Darchen](https://gautierdarchen.fr/)
