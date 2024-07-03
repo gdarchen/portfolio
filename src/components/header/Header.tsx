@@ -16,7 +16,7 @@ const header = tv({
   base: 'fixed z-20 flex w-full translate-y-0 justify-between bg-background-light px-6 py-2 transition duration-300 dark:bg-background sm:px-12 sm:py-4',
   variants: {
     mobileMenu: {
-      true: 'bg-opacity-0',
+      true: 'bg-opacity-0 dark:bg-opacity-0',
       false: 'bg-opacity-90 shadow-xl dark:bg-opacity-70',
     },
   },
