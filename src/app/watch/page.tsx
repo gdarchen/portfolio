@@ -20,7 +20,7 @@ export default async function Page() {
           <ArrowIcon className="size-4 flex-none text-primary md:h-6 md:w-5" />
         </div>
 
-        <span className="text-nowrap px-3 text-lg font-bold tracking-wider text-gray-200 opacity-85 md:text-2xl">
+        <span className="text-nowrap px-3 text-lg font-bold tracking-wider text-gray-900 opacity-85 dark:text-gray-200 md:text-2xl">
           Technology watch
         </span>
         <div className="h-[0.5px] w-full min-w-16 bg-gray-400 sm:w-44 lg:w-80" />
@@ -29,7 +29,7 @@ export default async function Page() {
       {/* Alert block */}
       <div className="flex items-center justify-center">
         <div
-          className="mb-4 inline-flex w-auto rounded-lg bg-blue-50 p-4 text-blue-800 dark:bg-gray-800 dark:text-blue-400"
+          className="mb-4 inline-flex w-auto rounded-lg bg-blue-50 p-4 text-blue-600 dark:bg-gray-800 dark:text-blue-400"
           role="alert"
         >
           <RiInformation2Fill className="shrink-0 text-lg" />

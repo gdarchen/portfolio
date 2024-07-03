@@ -1,9 +1,27 @@
 import React, { FC } from 'react'
+import { usePathname } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 
 const Logo: FC = () => {
+  const pathname = usePathname()
+  const router = useRouter()
+
+  const scrollToTop = () => {
+    if (typeof window === 'undefined') {
+      return
+    }
+
+    if (pathname !== '/') {
+      router.push('/')
+      return
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
-    <>
+    <button onClick={scrollToTop}>
       <motion.div
         initial={{ y: 0, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -51,7 +69,7 @@ const Logo: FC = () => {
           className="h-1 w-6 rounded bg-primary"
         />
       </motion.div>
-    </>
+    </button>
   )
 }
 

@@ -42,10 +42,10 @@ const WatchResource: FC<Props> = ({ resource }) => {
       href={url}
       target="_blank"
       rel="noreferrer"
-      className="flex max-w-sm flex-col justify-between rounded-lg border border-gray-200 bg-white p-4 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+      className="group flex max-w-sm flex-col justify-between rounded-lg border border-gray-200 bg-white p-4 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
     >
       <div>
-        <h5 className="mb-2 line-clamp-1 text-sm font-bold tracking-tight text-gray-900 md:line-clamp-2 dark:text-white">
+        <h5 className="mb-2 line-clamp-1 text-sm font-bold tracking-tight text-gray-700 dark:text-white md:line-clamp-2">
           {title}
         </h5>
         <div className="grid grid-cols-6 gap-4 font-normal text-gray-700 dark:text-gray-400">
@@ -56,7 +56,7 @@ const WatchResource: FC<Props> = ({ resource }) => {
       </div>
 
       <div className="mt-3 md:mt-6">
-        <Badge className="mr-2 inline">
+        <Badge className="mr-2 inline group-hover:bg-white dark:group-hover:bg-white/10">
           {source}
           {subSource && <span className="ml-2">{subSource}</span>}
         </Badge>

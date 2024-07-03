@@ -15,7 +15,7 @@ const WorkExperienceDetails: FC<Props> = ({ experience }) => {
       <div className="flex flex-col space-y-2">
         {/* Title */}
         <div className="flex items-center justify-between">
-          <span className="text-sm tracking-wide text-gray-100 sm:text-lg">
+          <span className="text-sm tracking-wide text-gray-600 dark:text-gray-100 sm:text-lg">
             {experience.title}
             {experience.company && (
               <span className="ml-2 text-primary">@ {experience.company}</span>
@@ -28,12 +28,12 @@ const WorkExperienceDetails: FC<Props> = ({ experience }) => {
         </div>
 
         {/* Date */}
-        <span className="font-mono text-sm text-secondary">
+        <span className="font-mono text-sm text-secondary-light dark:text-secondary">
           {experience.date}
         </span>
 
         {/* Location */}
-        <span className="mt-2 flex font-mono text-xs text-gray-500">
+        <span className="mt-2 flex font-mono text-xs text-gray-600">
           <FaLocationDot />
           <span className="ml-1">{experience.location}</span>
         </span>
@@ -51,7 +51,7 @@ const WorkExperienceDetails: FC<Props> = ({ experience }) => {
 
       <div className="flex flex-col space-y-4">
         {/* Description */}
-        <span className="font-header text-sm text-gray-300">
+        <span className="font-header text-sm text-gray-600 dark:text-gray-300">
           {experience.description}
         </span>
       </div>

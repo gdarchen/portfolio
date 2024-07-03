@@ -6,7 +6,7 @@ import { tv } from 'tailwind-variants'
 import ArrowIcon from '@/components/icons/ArrowIcon'
 
 const button = tv({
-  base: 'rounded border-[1.5px] border-primary p-4 font-mono text-lg text-primary hover:border-primary-300 hover:text-primary-300',
+  base: 'rounded border-[1.5px] border-primary p-4 font-mono text-lg text-primary hover:bg-hovered-light dark:hover:bg-hovered',
 })
 
 const GetInTouch: FC = () => {
@@ -14,7 +14,7 @@ const GetInTouch: FC = () => {
     <div
       id="contact"
       data-aos="fade-up"
-      className="flex h-48 w-full flex-col items-center space-y-4 bg-background md:h-72"
+      className="flex h-48 w-full flex-col items-center space-y-4 bg-background-light dark:bg-background md:h-72"
     >
       {/* Title */}
       <div className="flex flex-row items-center">
@@ -29,7 +29,7 @@ const GetInTouch: FC = () => {
       </div>
 
       {/* Get in touch */}
-      <span className="text-3xl font-bold tracking-wider text-gray-200 opacity-85 sm:text-4xl">
+      <span className="text-3xl font-bold tracking-wider text-gray-900 opacity-85 dark:text-gray-200 sm:text-4xl">
         Get In Touch
       </span>
       <div className="pt-4">

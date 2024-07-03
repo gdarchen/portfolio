@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss'
 import colors from 'tailwindcss/colors'
 
 export default {
+  darkMode: 'class',
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     rotate: {
@@ -30,13 +31,26 @@ export default {
           500: '#a688fa',
           600: '#ba9ffb',
         },
-        secondary: colors.blue[200],
-        'mobile-menu': '#0f141d',
+        secondary: {
+          DEFAULT: colors.blue[200],
+          light: colors.blue[400],
+        },
+        'mobile-menu': {
+          DEFAULT: '#0f141d',
+          light: colors.gray[100],
+        },
         background: {
           DEFAULT: '#03080f',
-          secondary: '#112340',
+          light: '#FFFFFF',
+          secondary: {
+            DEFAULT: '#112340',
+            light: colors.gray[100],
+          },
         },
-        hovered: '#153040',
+        hovered: {
+          DEFAULT: '#153040',
+          light: '#ECECEC',
+        },
       },
       screens: {
         sm: '640px',

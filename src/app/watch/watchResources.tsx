@@ -57,7 +57,7 @@ const WatchResources: FC<Props> = ({ initialResources, initialNextPage }) => {
             {Object.entries(resourcesByWeek).map(([week, resources]) => {
               return (
                 <div key={week} className="mt-8">
-                  <h4 className="font-header text-base font-medium text-secondary">
+                  <h4 className="font-header text-base font-medium text-secondary-light dark:text-secondary">
                     {week}
                   </h4>
                   <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
@@ -75,7 +75,7 @@ const WatchResources: FC<Props> = ({ initialResources, initialNextPage }) => {
       <div className="mt-20 flex items-center justify-center">
         {hasNextPage ? (
           <button
-            className="flex content-center items-center rounded border border-primary bg-background px-4 py-3 text-primary disabled:cursor-not-allowed disabled:border-gray-500 disabled:text-gray-500 sm:px-8 sm:py-4"
+            className="flex items-center justify-center rounded border border-primary bg-background-light px-4 py-3 text-primary disabled:cursor-not-allowed disabled:border-gray-500 disabled:text-gray-500 dark:bg-background sm:px-8 sm:py-4"
             disabled={isLoading}
             onClick={loadMoreResources}
           >

@@ -38,12 +38,17 @@ body {
     Droid Sans,
     Helvetica Neue,
     sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  @apply font-medium text-blue-600 hover:text-blue-800;
+  @apply font-medium text-blue-600 hover:text-primary;
+}
+
+.dark a {
+  @apply text-blue-600 hover:text-blue-400;
 }
 
 * {
@@ -51,6 +56,10 @@ a {
 }
 
 .slick-arrow::before {
+  @apply text-gray-500 opacity-100;
+}
+
+.dark .slick-arrow::before {
   @apply text-primary opacity-100;
 }
 
@@ -70,10 +79,14 @@ a {
   @apply rounded;
 }
 
-.slick-dots li.slick-active button:before {
-  @apply !text-primary;
+.slick-dots li button:before {
+  @apply !text-gray-600;
 }
 
-.slick-dots li button:before {
+.dark .slick-dots li button:before {
   @apply !text-gray-100;
+}
+
+.slick-dots li.slick-active button:before {
+  @apply !text-primary;
 }

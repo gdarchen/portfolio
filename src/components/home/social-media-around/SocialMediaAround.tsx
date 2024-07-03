@@ -12,7 +12,7 @@ const IconClickableWithAnimation: FC<Props> = ({ href, Icon }) => {
   return (
     <motion.div whileHover={{ y: -3, transition: { duration: 0.1 } }}>
       <a href={href} target="_blank" rel="noreferrer">
-        <Icon className="size-6 fill-current text-gray-400 hover:cursor-pointer hover:text-primary" />
+        <Icon className="size-6 fill-current text-gray-500 hover:cursor-pointer hover:text-primary dark:text-gray-400" />
       </a>
     </motion.div>
   )
@@ -64,7 +64,7 @@ export default function SocialMediaEmail() {
               rel="noreferrer"
               className="hover:no-underline"
             >
-              <span className="font-header tracking-wider text-gray-400 hover:cursor-pointer hover:text-primary">
+              <span className="font-header tracking-wider text-gray-500 hover:cursor-pointer hover:text-primary dark:text-gray-400">
                 darchen.gautier<span className="text-primary">@</span>gmail
                 <span className="text-primary">.</span>com
               </span>

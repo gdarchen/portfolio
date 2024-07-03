@@ -32,7 +32,7 @@ type Props = {
 }
 
 const iconLink = tv({
-  base: 'flex size-6 items-center justify-center text-xl text-gray-300 transition delay-75 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer hover:text-primary',
+  base: 'flex size-6 items-center justify-center text-xl text-gray-500 transition delay-75 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer hover:text-primary dark:text-gray-300',
 })
 
 const button = tv({
@@ -58,7 +58,7 @@ const ProjectGalleryModal: FC<ProjectGalleryModalProps> = ({
         className="relative z-10 focus:outline-none"
         onClose={onClose}
       >
-        <div className="fixed inset-0 z-10 w-screen overflow-y-auto bg-black/90">
+        <div className="fixed inset-0 z-10 w-screen overflow-y-auto bg-white/90 dark:bg-black/90">
           <div className="flex min-h-full items-center justify-center p-4">
             <TransitionChild
               enter="ease-out duration-300"
@@ -71,7 +71,7 @@ const ProjectGalleryModal: FC<ProjectGalleryModalProps> = ({
               <DialogPanel className="w-full max-w-md rounded-xl bg-white/5 p-6 backdrop-blur-2xl">
                 <DialogTitle
                   as="h3"
-                  className="text-base/7 font-medium text-white"
+                  className="text-base/7 font-medium text-gray-900 dark:text-white"
                 >
                   {project.title}
                 </DialogTitle>
@@ -142,7 +142,7 @@ const Project: FC<Props> = ({ project, index }) => {
         onClose={onCloseMediaModal}
       />
       {/* Media column */}
-      <div className="absolute z-10 hidden size-full grid-cols-12 content-center bg-background py-4 md:grid">
+      <div className="absolute z-10 hidden size-full grid-cols-12 content-center bg-background-light py-4 dark:bg-background md:grid">
         <div
           className={clsx(
             'relative col-span-7 size-full rounded',
@@ -150,7 +150,7 @@ const Project: FC<Props> = ({ project, index }) => {
           )}
         >
           <a href={mainLink} target="_blank" rel="noreferrer">
-            <span className="absolute z-10 size-full rounded bg-background opacity-30 transition-opacity duration-300 hover:cursor-pointer hover:opacity-0" />
+            <span className="absolute z-10 size-full rounded bg-background-light opacity-25 transition-opacity duration-300 hover:cursor-pointer hover:opacity-0 dark:bg-background dark:opacity-30" />
           </a>
 
           {project.video && (
@@ -183,9 +183,9 @@ const Project: FC<Props> = ({ project, index }) => {
         >
           <div className="relative size-full">
             <div className="absolute z-10 size-full bg-primary opacity-10" />
-            <div className="absolute z-10 size-full bg-background opacity-80" />
+            <div className="absolute z-10 size-full bg-background-light opacity-90 dark:bg-background dark:opacity-80" />
             {project.video && (
-              <div className="size-full rounded">
+              <div className="size-full rounded [&_*]:rounded">
                 <ReactPlayer url={project.video} height="100%" width="100%" />
               </div>
             )}
@@ -214,7 +214,7 @@ const Project: FC<Props> = ({ project, index }) => {
             )}
           >
             {/* Dates */}
-            <span className="font-mono text-sm text-secondary">
+            <span className="font-mono text-sm text-secondary-light dark:text-secondary">
               {project.dates}
             </span>
 
@@ -225,26 +225,28 @@ const Project: FC<Props> = ({ project, index }) => {
             </span>
 
             <a href={mainLink} target="_blank" rel="noopener noreferrer">
-              <span className="text-xl font-bold text-primary hover:cursor-pointer md:text-gray-200">
+              <span className="text-xl font-bold text-primary hover:cursor-pointer md:text-gray-600 dark:md:text-gray-200">
                 {project.title}
               </span>
             </a>
           </div>
 
-          <div className="z-10 w-full rounded-md py-2 opacity-90 shadow shadow-background-secondary md:bg-background-secondary md:p-6">
-            <span className="text-justify font-content text-sm text-gray-300 md:text-gray-400">
+          <div className="z-10 w-full rounded-md py-2 opacity-90 shadow shadow-background-secondary-light dark:opacity-90 dark:shadow-background-secondary md:bg-background-secondary-light md:p-6 dark:md:bg-background-secondary">
+            <span className="text-justify font-content text-sm text-gray-700 dark:text-gray-300 dark:md:text-gray-400">
               {project.description}
             </span>
 
             {/* Events */}
             {project.events && (
               <div className="mt-4">
-                <div className="font-mono text-sm text-secondary">Events</div>
+                <div className="font-mono text-sm text-primary dark:text-secondary">
+                  Events
+                </div>
                 {project.events.map((event) => {
                   return (
                     <div
                       key={event}
-                      className="flex text-left font-content text-xs text-gray-300 sm:text-sm md:text-justify md:text-gray-400"
+                      className="flex text-left font-content text-xs text-gray-600 dark:text-gray-300 sm:text-sm md:text-justify dark:md:text-gray-400"
                     >
                       <ArrowIcon className="mr-2 h-5 w-4 flex-none text-primary" />
                       <span>{event}</span>
@@ -259,7 +261,7 @@ const Project: FC<Props> = ({ project, index }) => {
           {project.technologies && (
             <div
               className={clsx(
-                'flex w-full flex-wrap font-content text-sm text-gray-300 md:text-gray-400',
+                'flex w-full flex-wrap font-content text-sm text-gray-600 dark:text-gray-300 dark:md:text-gray-400',
                 isLeftMedia ? 'md:justify-start' : 'md:justify-end',
               )}
             >

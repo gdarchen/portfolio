@@ -39,8 +39,10 @@ const WorkExperienceTabs: FC<ExperiencesTabsProps> = ({
           onTabClick(name)
         }}
         className={clsx(
-          'w-32 flex-none cursor-pointer rounded py-3 text-center font-mono text-xs duration-500 hover:bg-hovered hover:text-primary sm:text-sm md:w-60 md:px-4 md:pl-6 md:text-left lg:w-64',
-          isActive ? 'bg-hovered text-primary' : 'text-gray-500',
+          'w-32 flex-none cursor-pointer rounded py-3 text-center font-mono text-xs duration-500 hover:bg-hovered-light hover:text-primary hover:dark:bg-hovered sm:text-sm md:w-60 md:px-4 md:pl-6 md:text-left lg:w-64 lg:rounded-l-none',
+          isActive
+            ? 'bg-hovered-light text-primary dark:bg-hovered'
+            : 'text-gray-500',
         )}
       >
         {title}
@@ -52,7 +54,7 @@ const WorkExperienceTabs: FC<ExperiencesTabsProps> = ({
     <div className="flex w-screen flex-col items-start justify-start overflow-auto pb-4 scrollbar-hide sm:items-center sm:justify-center md:w-3/5 md:flex-row md:overflow-hidden md:pb-0 lg:w-auto">
       {/* Left bar Holder */}
       <div
-        className="relative order-2 hidden h-0.5 w-[34px] translate-y-1 rounded bg-gray-500 md:order-1 md:block md:h-[var(--height)] md:w-0.5"
+        className="relative order-2 hidden h-0.5 w-[34px] translate-y-1 rounded bg-gray-300 dark:bg-gray-500 md:order-1 md:block md:h-[var(--height)] md:w-0.5"
         style={{
           '--height': `${experiences.length * 44}px`,
         }}

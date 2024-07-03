@@ -9,7 +9,7 @@ type Props = {
 const IconMenu: FC<Props> = ({ rotate, onClick }: Props) => {
   return (
     <div
-      className="left-0 mt-2 space-y-2 text-white hover:cursor-pointer lg:hidden"
+      className="left-0 space-y-2 text-white hover:cursor-pointer lg:hidden"
       onClick={onClick}
     >
       <div className="flex justify-end">

@@ -17,7 +17,7 @@ const menuItemDigit = tv({
 })
 
 const menuItemText = tv({
-  base: 'font-content text-sm text-white duration-300 hover:cursor-pointer hover:text-primary sm:text-base',
+  base: 'font-content text-sm text-gray-900 duration-300 hover:cursor-pointer hover:text-primary dark:text-white sm:text-base',
 })
 
 const MobileMenu: FC<Props> = ({ hidden, onClose }) => {
@@ -30,10 +30,10 @@ const MobileMenu: FC<Props> = ({ hidden, onClose }) => {
     >
       <div
         onClick={onClose}
-        className="h-full w-1/4 bg-mobile-menu/30 backdrop-blur-sm hover:cursor-pointer"
+        className="h-full w-1/4 bg-mobile-menu-light/30 backdrop-blur-sm hover:cursor-pointer dark:bg-mobile-menu/30"
       />
 
-      <div className="flex h-full w-3/4 flex-col items-center justify-center space-y-8 bg-mobile-menu font-sans">
+      <div className="flex h-full w-3/4 flex-col items-center justify-center space-y-8 bg-mobile-menu-light font-sans dark:bg-mobile-menu">
         <Link href="/#about-me" onClick={onClose} className={menuItemLink()}>
           <span className={menuItemDigit()}>01.</span>
           <span className={menuItemText()}>About</span>
@@ -73,7 +73,7 @@ const MobileMenu: FC<Props> = ({ hidden, onClose }) => {
         </Link>
 
         <a href="/resume.pdf" target="_blank" rel="noreferrer">
-          <button className="rounded border border-primary px-5 py-2 font-content text-xs text-primary hover:bg-hovered sm:px-10 sm:py-4">
+          <button className="rounded border border-primary px-5 py-2 font-content text-xs text-primary hover:bg-hovered-light dark:hover:bg-hovered sm:px-10 sm:py-4">
             Resume
           </button>
         </a>

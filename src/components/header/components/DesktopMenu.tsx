@@ -3,13 +3,15 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { tv } from 'tailwind-variants'
 
+import ThemeSwitch from '@/components/theme-switch/ThemeSwitch'
+
 const menuItem = tv({
-  base: 'text-white duration-300 hover:cursor-pointer hover:text-blue-800',
+  base: 'text-gray-900 duration-300 hover:cursor-pointer hover:text-primary dark:text-white dark:hover:text-blue-400',
 })
 
 const DesktopMenu: FC = () => {
   return (
-    <div className="hidden flex-row items-center space-x-4 font-mono text-xs lg:flex lg:space-x-8">
+    <div className="hidden flex-row items-center justify-center space-x-4 font-mono text-xs lg:flex lg:space-x-7">
       <motion.div
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -80,11 +82,13 @@ const DesktopMenu: FC = () => {
           initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: 'spring', duration: 1.2, delay: 1.2 }}
-          className="border-spacing-2 rounded-sm border border-primary px-3 py-2 text-primary hover:bg-hovered"
+          className="border-spacing-2 rounded-sm border border-primary px-3 py-2 text-primary hover:bg-hovered-light dark:hover:bg-hovered"
         >
           Resume
         </motion.button>
       </a>
+
+      <ThemeSwitch />
     </div>
   )
 }
