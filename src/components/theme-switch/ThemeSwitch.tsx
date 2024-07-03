@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { HiOutlineMoon, HiSun } from 'react-icons/hi'
 import { tv } from 'tailwind-variants'
 import { useLocalStorage } from 'usehooks-ts'
@@ -9,6 +9,17 @@ const themeIcon = tv({
 
 const ThemeSwitch: FC = () => {
   const [theme, setTheme] = useLocalStorage('theme', 'dark')
+  const [isLight, setIsLight] = useState(theme === 'light')
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setIsLight(theme === 'light')
+  }, [theme])
+
+  // Trick to avoid hydration mismatch on SVG tags
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     document.body.classList.remove('light', 'dark')
@@ -16,7 +27,11 @@ const ThemeSwitch: FC = () => {
   }, [theme])
 
   const handleThemeChange = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light')
+    setTheme(isLight ? 'dark' : 'light')
+  }
+
+  if (!mounted) {
+    return null
   }
 
   return (

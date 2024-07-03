@@ -4,6 +4,9 @@ import colors from 'tailwindcss/colors'
 export default {
   darkMode: 'class',
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   theme: {
     rotate: {
       '-180': '-180deg',
