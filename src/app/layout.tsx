@@ -59,7 +59,7 @@ const RootLayout: FC<Props> = ({ children }) => {
         />
       </head>
       <body>
-        <div className="relative min-h-screen w-full snap-mandatory bg-background">
+        <div className="relative min-h-screen w-full snap-mandatory bg-background-light dark:bg-background">
           <Header />
           {children}
         </div>

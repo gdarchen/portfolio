@@ -23,7 +23,7 @@ const MyName: FC = () => {
           opacity: { delay: 0.5, duration: 0.2 },
           y: { delay: 0.5, duration: 0.2 },
         }}
-        className="mt-4 text-3xl font-bold text-gray-300 sm:text-5xl md:text-6xl lg:text-7xl"
+        className="mt-4 text-3xl font-bold text-gray-700 dark:text-gray-300 sm:text-5xl md:text-6xl lg:text-7xl"
       >
         Gautier Darchen.
       </motion.h1>
@@ -35,7 +35,7 @@ const MyName: FC = () => {
           opacity: { delay: 0.6, duration: 0.2 },
           y: { delay: 0.6, duration: 0.2 },
         }}
-        className="mt-4 text-3xl font-bold text-gray-400 sm:text-5xl md:text-6xl lg:text-7xl"
+        className="mt-4 text-3xl font-bold text-gray-500 dark:text-gray-400 sm:text-5xl md:text-6xl lg:text-7xl"
       >
         I am passionate about web technologies.
       </motion.h2>
@@ -47,7 +47,7 @@ const MyName: FC = () => {
           opacity: { delay: 0.7, duration: 0.2 },
           y: { delay: 0.7, duration: 0.2 },
         }}
-        className="mt-10 font-header text-sm tracking-wider text-gray-400 sm:text-base md:text-lg"
+        className="mt-10 font-header text-sm tracking-wider text-gray-600 dark:text-gray-400 sm:text-base md:text-lg"
       >
         Senior Software Engineer at <a href="https://www.swile.co/">Swile</a>,
         specialized in React, Node.js and DevOps technologies.
@@ -63,7 +63,7 @@ const MyName: FC = () => {
         className="mt-12"
       >
         <a href="/resume.pdf" target="_blank" rel="noreferrer">
-          <button className="rounded border border-primary bg-background px-4 py-3 text-primary sm:px-8 sm:py-4">
+          <button className="rounded border border-primary bg-background-light px-4 py-3 text-primary hover:bg-hovered-light dark:bg-background dark:hover:bg-hovered sm:px-8 sm:py-4">
             Download my resume
           </button>
         </a>

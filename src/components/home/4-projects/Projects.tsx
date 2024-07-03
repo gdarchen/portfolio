@@ -21,7 +21,7 @@ const Projects: FC = () => {
           </span>
         </div>
 
-        <span className="text-nowrap px-3 text-lg font-bold tracking-wider text-gray-200 opacity-85 md:text-2xl">
+        <span className="text-nowrap px-3 text-lg font-bold tracking-wider text-gray-900 opacity-85 dark:text-gray-200 md:text-2xl">
           Projects
         </span>
         <div className="h-[0.2px] w-full bg-gray-400 sm:w-44 lg:w-80" />

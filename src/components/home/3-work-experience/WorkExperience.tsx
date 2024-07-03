@@ -35,7 +35,7 @@ const WorkExperience: FC = () => {
           </span>
         </div>
 
-        <span className="px-3 text-lg font-bold tracking-wider text-gray-200 opacity-85 md:text-2xl">
+        <span className="px-3 text-lg font-bold tracking-wider text-gray-900 opacity-85 dark:text-gray-200 md:text-2xl">
           <span className="hidden text-nowrap md:inline">
             Work experience &amp; Education
           </span>
