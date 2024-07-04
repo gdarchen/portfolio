@@ -43,7 +43,7 @@ const RootLayout: FC<Props> = ({ children }) => {
   const isProd = process.env.NODE_ENV === 'production'
 
   return (
-    <html lang="en">
+    <html lang="en" translate="no">
       <head>
         {/* React Slick CSS */}
         <link
