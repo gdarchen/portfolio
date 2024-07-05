@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import { type Project } from '../ProjectsList'
 const ReactPlayer = dynamic(() => import('react-player'), { ssr: false })
 
+import Image from 'next/image'
 import { clsx } from 'clsx'
 import { BiCarousel } from 'react-icons/bi'
 import { FaGithub, FaMicrophoneAlt } from 'react-icons/fa'
@@ -14,7 +15,6 @@ import { tv } from 'tailwind-variants'
 
 import Badge from '@/components/badge/Badge'
 import ArrowIcon from '@/components/icons/ArrowIcon'
-import BasicImage from '@/components/image/BasicImage'
 import {
   Button,
   Dialog,
@@ -88,10 +88,12 @@ const ProjectGalleryModal: FC<ProjectGalleryModalProps> = ({
                   )}
 
                   {project.images?.length === 1 ? (
-                    <BasicImage
+                    <Image
                       src={project.images[0]}
                       alt={`Project ${project.title} image`}
                       className="size-full rounded"
+                      width={670}
+                      height={420}
                     />
                   ) : project.images && project.images?.length > 1 ? (
                     <ProjectImageCaroussel images={project.images} />
@@ -161,10 +163,12 @@ const Project: FC<Props> = ({ project, index }) => {
 
           {/* Images */}
           {project.images?.length === 1 ? (
-            <BasicImage
+            <Image
               src={project.images[0]}
               alt={`Project ${project.title} image`}
               className="size-full rounded"
+              width={670}
+              height={420}
             />
           ) : project.images && project.images?.length > 1 ? (
             <ProjectImageCaroussel images={project.images} />
@@ -190,10 +194,12 @@ const Project: FC<Props> = ({ project, index }) => {
               </div>
             )}
             {project.images && project.images?.length > 0 && (
-              <BasicImage
+              <Image
                 src={project.images[0]}
                 alt={`Project ${project.title} image`}
                 className="size-full rounded"
+                width={670}
+                height={420}
               />
             )}
           </div>

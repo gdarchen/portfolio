@@ -21,7 +21,6 @@ export const metadata: Metadata = {
   description,
   applicationName: "Gautier Darchen's portfolio",
   authors: [{ name: 'Gautier Darchen', url: WEBSITE_URL }],
-  robots: 'index, follow',
   metadataBase: new URL(WEBSITE_URL),
   twitter: {
     card: 'summary_large_image',
@@ -36,6 +35,14 @@ export const metadata: Metadata = {
     description,
     siteName: 'Gautier DARCHEN',
     images: [{ url: image }],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+    'max-video-preview': -1,
+    googleBot: 'index, follow',
   },
 }
 
