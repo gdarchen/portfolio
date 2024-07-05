@@ -100,8 +100,8 @@ const Search: FC = () => {
                 <DialogPanel className="w-full max-w-2xl overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all dark:bg-gray-800">
                   {/* Search input */}
                   <div className="flex w-full items-center justify-center">
-                    <div className="group flex w-full items-center justify-center rounded-lg border-none bg-white/5 px-3 py-1.5 text-sm/6 text-gray-800 outline outline-blue-400 dark:text-white">
-                      <HiSearch className="mr-2" />
+                    <div className="group flex w-full items-center justify-center rounded-lg border-none bg-white/5 px-3 py-1.5 text-base/6 text-gray-800 outline outline-blue-400 dark:text-white">
+                      <HiSearch className="mr-2 text-lg" />
                       <Input
                         name="search"
                         type="text"
