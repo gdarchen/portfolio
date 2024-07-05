@@ -14,7 +14,7 @@ type Props = PropsWithChildren
 const title = 'Gautier Darchen - Senior Software Engineer'
 const description =
   'Passionate Senior Software Engineer who wants to have an impact on our society'
-const image = '/gdarchen-circle.png'
+const image = '/website.png'
 
 export const metadata: Metadata = {
   title,

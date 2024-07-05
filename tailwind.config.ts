@@ -67,7 +67,10 @@ export default {
       },
     },
   },
-  plugins: [require('tailwind-scrollbar'), require('tailwind-scrollbar-hide')],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
   variants: {
     scrollbar: ['rounded'],
   },
