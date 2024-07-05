@@ -5,8 +5,12 @@ import { tv } from 'tailwind-variants'
 
 import ThemeSwitch from '@/components/theme-switch/ThemeSwitch'
 
+const menuItemLink = tv({
+  base: 'group hover:cursor-pointer hover:text-primary dark:hover:text-blue-400',
+})
+
 const menuItem = tv({
-  base: 'text-gray-900 duration-300 hover:cursor-pointer hover:text-primary dark:text-white dark:hover:text-blue-400',
+  base: 'text-gray-900 duration-300 group-hover:cursor-pointer group-hover:text-primary dark:text-white dark:group-hover:text-blue-400',
 })
 
 const DesktopMenu: FC = () => {
@@ -16,6 +20,7 @@ const DesktopMenu: FC = () => {
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: 'spring', duration: 1.2, delay: 0.4 }}
+        className={menuItemLink()}
       >
         <Link href="/#about-me">
           &gt; 01. <span className={menuItem()}>About</span>
@@ -26,7 +31,7 @@ const DesktopMenu: FC = () => {
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: 'spring', duration: 1.2, delay: 0.7 }}
-        className="text-primary"
+        className={menuItemLink()}
       >
         <Link href="/#work-experience">
           &gt; 02. <span className={menuItem()}>Experience</span>
@@ -37,7 +42,7 @@ const DesktopMenu: FC = () => {
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: 'spring', duration: 1.2, delay: 0.8 }}
-        className="text-primary"
+        className={menuItemLink()}
       >
         <Link href="/#projects">
           &gt; 03. <span className={menuItem()}>Projects</span>
@@ -48,7 +53,7 @@ const DesktopMenu: FC = () => {
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: 'spring', duration: 1.2, delay: 0.9 }}
-        className="text-primary"
+        className={menuItemLink()}
       >
         <Link href="/#skills">
           &gt; 04. <span className={menuItem()}>Skills</span>
@@ -59,7 +64,7 @@ const DesktopMenu: FC = () => {
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: 'spring', duration: 1.2, delay: 1.2 }}
-        className="text-primary"
+        className={menuItemLink()}
       >
         <Link href="/#contact">
           &gt; 05. <span className={menuItem()}>Contact</span>
@@ -70,7 +75,7 @@ const DesktopMenu: FC = () => {
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: 'spring', duration: 1.2, delay: 1.3 }}
-        className="text-primary"
+        className={menuItemLink()}
       >
         <Link href="/watch">
           &gt; <span className={menuItem()}>Tech. watch</span>

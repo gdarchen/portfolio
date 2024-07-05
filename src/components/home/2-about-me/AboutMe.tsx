@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
+import Image from 'next/image'
 
 import ArrowIcon from '@/components/icons/ArrowIcon'
-import BasicImage from '@/components/image/BasicImage'
 
 const AboutMe: FC = () => {
   const technologies = [
@@ -152,10 +152,11 @@ const AboutMe: FC = () => {
 
             <div className="absolute size-5/6 overflow-hidden rounded">
               <div className="absolute size-full overflow-hidden rounded bg-primary opacity-10 duration-300 group-hover:opacity-0" />
-              <BasicImage
+              <Image
                 src="/img/profile.jpg"
-                className="rounded-lg object-contain"
                 alt="Portfolio profile"
+                className="rounded-lg object-contain"
+                fill
               />
             </div>
           </div>
@@ -164,10 +165,11 @@ const AboutMe: FC = () => {
           <div className="relative flex h-48 w-full items-center justify-center md:hidden">
             <div className="absolute h-full w-48 translate-x-5 translate-y-5 rounded border-2 border-primary" />
             <div className="absolute h-full w-48 overflow-hidden rounded">
-              <BasicImage
+              <Image
                 src="/img/profile.jpg"
                 className="rounded-lg object-contain"
                 alt="Portfolio profile"
+                fill
               />
             </div>
             <div className="absolute h-full w-48 overflow-hidden rounded bg-primary opacity-10 md:opacity-60" />
