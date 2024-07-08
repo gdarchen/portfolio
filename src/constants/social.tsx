@@ -17,6 +17,6 @@ export const socialMedia: SocialMedia[] = [
   },
   {
     icon: FaInstagram,
-    url: 'https://www.instagram.com/gdarchen/',
+    url: 'https://www.instagram.com/g_darchen/',
   },
 ]
