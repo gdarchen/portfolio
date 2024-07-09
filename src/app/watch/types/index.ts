@@ -1,7 +1,9 @@
-type WatchResource = {
+import { RichTextPart } from '@/lib/notion'
+
+export type WatchResource = {
   id: string
   title: string
-  tldr?: string
+  tldr?: RichTextPart[]
   done: boolean
   url: string
   type: string
