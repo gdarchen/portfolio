@@ -3,6 +3,8 @@ import { tv } from 'tailwind-variants'
 
 import Badge from '@/components/badge/Badge'
 
+import type { WatchResource } from './types'
+
 type Props = {
   resource: WatchResource
   query?: string
@@ -20,6 +22,18 @@ const resourceTldr = tv({
   base: 'col-span-6 text-left font-mono text-xs md:text-justify',
   variants: {
     truncate: { true: 'line-clamp-4 md:line-clamp-6' },
+  },
+})
+
+const tldr = tv({
+  variants: {
+    code: {
+      true: 'm-0 whitespace-break-spaces rounded-sm bg-code-light px-1 py-px text-[90%] dark:bg-code',
+    },
+    bold: { true: 'font-bold' },
+    italic: { true: 'italic' },
+    underline: { true: 'underline' },
+    strikethrough: { true: 'line-through' },
   },
 })
 
@@ -64,10 +78,37 @@ const ResourceType: FC<{ type: WatchResource['type'] }> = ({ type }) => {
   )
 }
 
+const Tldr: FC<{ parts: WatchResource['tldr']; query?: string }> = ({
+  parts,
+  query,
+}) => {
+  return (
+    <span>
+      {parts?.map((part, index) => {
+        const isLast = index + 1 === parts.length
+        const needsDot = isLast && !part.plain_text.endsWith('.')
+        return (
+          <span
+            key={`${part.plain_text}_${index}`}
+            className={tldr({
+              code: part.annotations.code,
+              bold: part.annotations.bold,
+              italic: part.annotations.italic,
+              underline: part.annotations.underline,
+              strikethrough: part.annotations.strikethrough,
+            })}
+          >
+            {query ? highlightQuery(part.plain_text, query) : part.plain_text}
+            {needsDot && '.'}
+          </span>
+        )
+      })}
+    </span>
+  )
+}
+
 const WatchResource: FC<Props> = ({ resource, query, truncate = true }) => {
   const { title, tldr, source, subSource, url, type } = resource
-  const trimedTldr = tldr?.trim()
-  const tldrWithDot = trimedTldr?.endsWith('.') ? trimedTldr : `${trimedTldr}.`
 
   return (
     <a
@@ -82,7 +123,7 @@ const WatchResource: FC<Props> = ({ resource, query, truncate = true }) => {
         </h5>
         <div className="grid grid-cols-6 gap-4 font-normal text-gray-700 dark:text-gray-400">
           <div className={resourceTldr({ truncate })}>
-            {query ? highlightQuery(tldrWithDot, query) : tldrWithDot}
+            <Tldr parts={tldr} query={query} />
           </div>
         </div>
       </div>

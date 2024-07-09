@@ -1,10 +1,12 @@
+import { WatchResource } from '../types'
+
 export const transformWatchResourceToDTO = (resource: any): WatchResource => {
   const { id, properties } = resource
 
   return {
     id,
     title: properties.Name.title?.[0].plain_text,
-    tldr: properties['tl;dr'].rich_text?.[0]?.plain_text,
+    tldr: properties['tl;dr'].rich_text,
     done: properties.Done.checkbox,
     url: properties.URL.url,
     type: properties.Type.select.name,

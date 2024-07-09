@@ -54,6 +54,10 @@ export default {
           DEFAULT: '#153040',
           light: '#ECECEC',
         },
+        code: {
+          DEFAULT: '#6e768166',
+          light: '#e4e4e4',
+        },
       },
       screens: {
         sm: '640px',
