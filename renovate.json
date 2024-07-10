@@ -10,6 +10,7 @@
   ],
   "timezone": "Europe/Paris",
   "labels": ["dependencies"],
+  "prConcurrentLimit": 5,
   "packageRules": [
     {
       "stabilityDays": 3,
@@ -22,14 +23,10 @@
         "digest",
         "lockFileMaintenance"
       ]
-    },
-    {
-      "matchDatasources": ["orb"],
-      "automerge": true
     }
   ],
   "prCreation": "not-pending",
-  "schedule": ["before 8am on Monday"],
+  "schedule": ["before 8am"],
   "commitMessagePrefix": "upgrade(deps):",
   "commitMessageAction": "update"
 }
