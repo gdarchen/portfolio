@@ -14,7 +14,7 @@ const GetInTouch: FC = () => {
     <div
       id="contact"
       data-aos="fade-up"
-      className="flex h-48 w-full flex-col items-center space-y-4 bg-background-light dark:bg-background md:h-72"
+      className="flex h-48 w-full flex-col items-center space-y-4 bg-background-light dark:bg-background md:h-64"
     >
       {/* Title */}
       <div className="flex flex-row items-center">

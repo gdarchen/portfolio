@@ -10,12 +10,19 @@
 
 <div align="center">
 
-<!-- TODO: update screenshot in README (new skills section + Contentsquare, not Swile) -->
+<!-- TODO: Contentsquare
+  - update screenshot in README
+  - update About
+  - new skills section
+  - new screenshot in metadata
+  - update profile README
+-->
 <!-- TODO: profile README (and dynamic svg) -->
 
 <!-- TODO: uncomment when public -->
 <!-- [![last commit](https://badgen.net/github/last-commit/gdarchen/portfolio?icon=https://simpleicons.now.sh/git/fff)](https://github.com/gdarchen/portfolio) -->
 
+![Vercel Deploy](https://deploy-badge.vercel.app/vercel/gautier-darchen)
 [![pnpm version](https://img.shields.io/badge/v9.4.0-F69220.svg?logo=pnpm&logoColor=white&label=pnpm)](https://pnpm.io/)
 [![node version](https://img.shields.io/badge/%3E=20.0.0-3C873A.svg?logo=node.js&logoColor=white&label=node)](https://nodejs.org/en/)
 
@@ -41,7 +48,14 @@ Here is how to setup the project locally to contribute:
    ```bash
    $ pnpm install
    ```
-3. Run the application locally:
+3. Create the `.env.local` file as follows (the values can be retrieved on the project settings in Vercel):
+
+   ```env
+   NOTION_TOKEN=<CHANGE_ME>
+   NOTION_DATABASE_ID=<CHANGE_ME>
+   ```
+
+4. Run the application locally:
    ```bash
    $ pnpm dev
    ```
@@ -50,7 +64,7 @@ Here is how to setup the project locally to contribute:
 
 ## 📦 Deploy
 
-To deploy a new version, simply open a pull request again the `main` branch.
+To deploy a new version, simply open a pull request against the `main` branch.
 
 When this pull request will be merged, a new version will be deployed in production automatically.
 
