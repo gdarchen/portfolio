@@ -36,3 +36,6 @@ jobs:
       - name: Build app for Renovate PRs
         if: startsWith(github.head_ref, 'renovate/')
         run: pnpm build
+        env:
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
