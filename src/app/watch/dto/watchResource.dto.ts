@@ -14,5 +14,6 @@ export const transformWatchResourceToDTO = (resource: any): WatchResource => {
     date: new Date(properties.Date.date.start),
     source: properties.Source.select.name,
     subSource: properties['Sub-source'].rich_text?.[0]?.plain_text,
+    shiny: properties.Shiny.checkbox,
   }
 }
