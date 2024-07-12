@@ -32,3 +32,7 @@ jobs:
 
       - name: Lint source code
         run: pnpm lint
+
+      - name: Build app for Renovate PRs
+        if: startsWith(github.event.pull_request.base.ref, 'renovate/')
+        run: pnpm build
