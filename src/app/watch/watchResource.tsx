@@ -120,7 +120,7 @@ const WatchResource: FC<Props> = ({ resource, query, truncate = true }) => {
   return (
     <div className="group relative flex">
       {shiny && (
-        <div className="absolute inset-0 z-0 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 opacity-25 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200" />
+        <div className="absolute -inset-2 z-0 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 opacity-25 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200 md:-inset-1" />
       )}
       <a
         href={url}
