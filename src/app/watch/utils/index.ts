@@ -1,3 +1,5 @@
+import { WatchResource } from '../types'
+
 type WatchResourceGroups = {
   [key: string]: WatchResource[]
 }
