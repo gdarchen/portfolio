@@ -2,8 +2,28 @@ import { FC, ReactNode } from 'react'
 import { tv } from 'tailwind-variants'
 
 import Badge from '@/components/badge/Badge'
+import Meteors from '@/components/cards/Meteors'
 
 import type { WatchResource } from './types'
+
+const VariantMapping = {
+  Article: {
+    color: 'teal',
+    emoji: '📝',
+  },
+  Video: {
+    color: 'red',
+    emoji: '📹',
+  },
+  Podcast: {
+    color: 'yellow',
+    emoji: '🎧',
+  },
+  Book: {
+    color: 'blue',
+    emoji: '📙',
+  },
+} as const
 
 type Props = {
   resource: WatchResource
@@ -53,22 +73,9 @@ const highlightQuery = (str: string, query: string): ReactNode => {
 }
 
 const ResourceType: FC<{ type: WatchResource['type'] }> = ({ type }) => {
-  const variant =
-    type === 'Article'
-      ? 'teal'
-      : type === 'Video'
-        ? 'red'
-        : type === 'Podcast'
-          ? 'yellow'
-          : 'default'
-  const emoji =
-    type === 'Article'
-      ? '📝'
-      : type === 'Video'
-        ? '📹'
-        : type === 'Podcast'
-          ? '🎧'
-          : ''
+  const variantMapping = VariantMapping[type]
+  const variant = variantMapping?.color ?? 'default'
+  const emoji = variantMapping?.emoji ?? ''
 
   return (
     <Badge variant={variant}>
@@ -108,34 +115,44 @@ const Tldr: FC<{ parts: WatchResource['tldr']; query?: string }> = ({
 }
 
 const WatchResource: FC<Props> = ({ resource, query, truncate = true }) => {
-  const { title, tldr, source, subSource, url, type } = resource
+  const { title, tldr, source, subSource, url, type, shiny } = resource
 
   return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noreferrer"
-      className="group flex max-w-sm flex-col justify-between rounded-lg border border-gray-200 bg-white p-4 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-    >
-      <div>
-        <h5 className={resourceTitle({ truncate })}>
-          {query ? highlightQuery(title, query) : title}
-        </h5>
-        <div className="grid grid-cols-6 gap-4 font-normal text-gray-700 dark:text-gray-400">
-          <div className={resourceTldr({ truncate })}>
-            <Tldr parts={tldr} query={query} />
+    <div className="group relative flex">
+      {shiny && (
+        <div className="absolute inset-0 z-0 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 opacity-25 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200" />
+      )}
+      <a
+        href={url}
+        target="_blank"
+        rel="noreferrer"
+        className="relative z-10 flex max-w-sm flex-col justify-between overflow-hidden rounded-lg border border-gray-200 bg-white p-4 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+      >
+        <div>
+          <h5 className={resourceTitle({ truncate })}>
+            {query ? highlightQuery(title, query) : title}
+          </h5>
+          <div className="grid grid-cols-6 gap-4 font-normal text-gray-700 dark:text-gray-400">
+            <div className={resourceTldr({ truncate })}>
+              <Tldr parts={tldr} query={query} />
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="mt-3 md:mt-6">
-        <Badge className="mr-2 inline group-hover:bg-white dark:group-hover:bg-white/10">
-          {source}
-          {subSource && <span className="ml-2">{subSource}</span>}
-        </Badge>
-        <ResourceType type={type} />
-      </div>
-    </a>
+        <div className="mt-3 md:mt-6">
+          <Badge className="mr-2 inline group-hover:bg-white dark:group-hover:bg-white/10">
+            {source}
+            {subSource && <span className="ml-2">{subSource}</span>}
+          </Badge>
+          <ResourceType type={type} />
+        </div>
+        {shiny && (
+          <div>
+            <Meteors number={25} />
+          </div>
+        )}
+      </a>
+    </div>
   )
 }
 

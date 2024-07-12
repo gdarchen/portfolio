@@ -13,11 +13,8 @@
 <!-- TODO: Contentsquare
   - update screenshot in README
   - update About
-  - new skills section
   - new screenshot in metadata
-  - update profile README
 -->
-<!-- TODO: profile README (and dynamic svg) -->
 
 <!-- TODO: uncomment when public -->
 <!-- [![last commit](https://badgen.net/github/last-commit/gdarchen/portfolio?icon=https://simpleicons.now.sh/git/fff)](https://github.com/gdarchen/portfolio) -->

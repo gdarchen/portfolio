@@ -11,4 +11,5 @@ export type WatchResource = {
   date: Date
   source?: string
   subSource?: string
+  shiny?: boolean
 }
