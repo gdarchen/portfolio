@@ -5,6 +5,7 @@ import Header from '@/components/header/Header'
 import ScreenSizeDetector from '@/components/screen-size-detector/ScreenSizeDetector'
 import { WEBSITE_URL } from '@/constants/globals'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import './globals.css'
 import 'aos/dist/aos.css'
@@ -71,6 +72,7 @@ const RootLayout: FC<Props> = ({ children }) => {
           {children}
         </div>
         <Analytics />
+        <SpeedInsights />
         {!isProd && <ScreenSizeDetector />}
       </body>
     </html>
