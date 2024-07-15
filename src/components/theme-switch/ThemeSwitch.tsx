@@ -30,7 +30,7 @@ const menuItemIcon = tv({
 
 const ThemeSwitch: FC = () => {
   const [isSystemDark, setIsSystemDark] = useState(false)
-  const [theme, setTheme] = useLocalStorage<string | undefined>(
+  const [theme, setTheme, removeTheme] = useLocalStorage<string | undefined>(
     'theme',
     undefined,
   )
@@ -57,6 +57,7 @@ const ThemeSwitch: FC = () => {
   }, [])
 
   useEffect(() => {
+    console.log('📍 theme', theme)
     // If the theme is `dark` or `system` (and system theme is `dark`)
     if (theme === 'dark' || (theme === undefined && isSystemDark)) {
       document.documentElement.classList.add('dark')
@@ -69,7 +70,7 @@ const ThemeSwitch: FC = () => {
   const handleThemeChange = (newTheme: string): void => {
     // In case the `system` theme is selected, remove it from the LocalStorage
     if (newTheme === 'system') {
-      setTheme(undefined)
+      removeTheme()
       return
     }
 
@@ -123,7 +124,6 @@ const ThemeSwitch: FC = () => {
                 className={menuItem({ active: theme === undefined })}
                 onClick={() => {
                   handleThemeChange('system')
-                  close()
                 }}
               >
                 <HiOutlineDesktopComputer className={menuItemIcon()} /> System
