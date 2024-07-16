@@ -22,7 +22,7 @@ const WorkExperienceDetails: FC<Props> = ({ experience }) => {
             )}
           </span>
 
-          <span className="text-sm tracking-wide text-gray-100 sm:text-lg">
+          <span className="text-sm tracking-wide text-gray-600 dark:text-gray-100 sm:text-lg">
             {experience.icon}
           </span>
         </div>
