@@ -126,7 +126,7 @@ const WatchResource: FC<Props> = ({ resource, query, truncate = true }) => {
         href={url}
         target="_blank"
         rel="noreferrer"
-        className="relative z-10 flex max-w-sm flex-col justify-between overflow-hidden rounded-lg border border-gray-200 bg-white p-4 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+        className="relative z-10 flex w-full max-w-sm flex-col justify-between overflow-hidden rounded-lg border border-gray-200 bg-white p-4 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
       >
         <div>
           <h5 className={resourceTitle({ truncate })}>
