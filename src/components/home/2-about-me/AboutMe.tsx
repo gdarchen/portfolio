@@ -151,7 +151,7 @@ const AboutMe: FC = () => {
             <div className="absolute size-5/6 translate-x-5 translate-y-5 rounded border-2 border-primary duration-300 group-hover:translate-x-3 group-hover:translate-y-3" />
 
             <div className="absolute size-5/6 overflow-hidden rounded">
-              <div className="absolute size-full overflow-hidden rounded bg-primary opacity-10 duration-300 group-hover:opacity-0" />
+              <div className="absolute size-full overflow-hidden rounded-lg bg-primary opacity-10 duration-300 group-hover:opacity-0" />
               <Image
                 src="/img/profile.jpg"
                 alt="Portfolio profile"
@@ -172,7 +172,7 @@ const AboutMe: FC = () => {
                 fill
               />
             </div>
-            <div className="absolute h-full w-48 overflow-hidden rounded bg-primary opacity-10 md:opacity-60" />
+            <div className="absolute h-full w-48 overflow-hidden rounded-lg bg-primary opacity-10 md:opacity-60" />
           </div>
         </div>
       </div>
