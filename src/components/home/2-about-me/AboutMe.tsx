@@ -167,7 +167,7 @@ const AboutMe: FC = () => {
             <div className="absolute h-full w-48 overflow-hidden rounded">
               <Image
                 src="/img/profile.jpg"
-                className="rounded-lg object-contain"
+                className="rounded-lg object-cover"
                 alt="Portfolio profile"
                 fill
               />

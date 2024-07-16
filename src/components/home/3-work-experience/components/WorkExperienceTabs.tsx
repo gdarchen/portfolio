@@ -85,7 +85,7 @@ const WorkExperienceTabs: FC<ExperiencesTabsProps> = ({
           })}
         </div>
 
-        <div className="block h-0.5 rounded bg-gray-500 md:hidden">
+        <div className="block h-0.5 rounded bg-gray-200 dark:bg-gray-500 md:hidden">
           <motion.div
             animate={{ x: barAbovePosition }}
             className="h-0.5 w-[128px] rounded bg-primary"
