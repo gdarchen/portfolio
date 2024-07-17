@@ -57,7 +57,6 @@ const ThemeSwitch: FC = () => {
   }, [])
 
   useEffect(() => {
-    console.log('📍 theme', theme)
     // If the theme is `dark` or `system` (and system theme is `dark`)
     if (theme === 'dark' || (theme === undefined && isSystemDark)) {
       document.documentElement.classList.add('dark')

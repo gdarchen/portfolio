@@ -1,4 +1,11 @@
-import { FC, ReactNode } from 'react'
+import {
+  FC,
+  MouseEvent,
+  ReactNode,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react'
 import { tv } from 'tailwind-variants'
 
 import Badge from '@/components/badge/Badge'
@@ -89,11 +96,16 @@ const Tldr: FC<{ parts: WatchResource['tldr']; query?: string }> = ({
   parts,
   query,
 }) => {
+  function endsWithPunctuation(str: string): boolean {
+    const punctuationRegex = /[.!?]$/
+    return punctuationRegex.test(str)
+  }
+
   return (
     <span>
       {parts?.map((part, index) => {
         const isLast = index + 1 === parts.length
-        const needsDot = isLast && !part.plain_text.endsWith('.')
+        const needsDot = isLast && !endsWithPunctuation(part.plain_text)
         return (
           <span
             key={`${part.plain_text}_${index}`}
@@ -115,7 +127,28 @@ const Tldr: FC<{ parts: WatchResource['tldr']; query?: string }> = ({
 }
 
 const WatchResource: FC<Props> = ({ resource, query, truncate = true }) => {
+  const [isTruncated, setIsTruncated] = useState(false)
+  const [showMore, setShowMore] = useState(false)
+
   const { title, tldr, source, subSource, url, type, shiny } = resource
+
+  const ref = useRef<HTMLDivElement>(null)
+
+  useLayoutEffect(() => {
+    const { offsetHeight, scrollHeight } = ref.current || {}
+
+    if (offsetHeight && scrollHeight && offsetHeight < scrollHeight) {
+      setIsTruncated(true)
+    } else {
+      setIsTruncated(false)
+    }
+  }, [ref])
+
+  const onShowMoreClick = (e: MouseEvent<HTMLButtonElement>): void => {
+    e.preventDefault()
+    setShowMore(true)
+    setIsTruncated(false)
+  }
 
   return (
     <div className="group relative flex">
@@ -129,15 +162,27 @@ const WatchResource: FC<Props> = ({ resource, query, truncate = true }) => {
         className="relative z-10 flex w-full max-w-sm flex-col justify-between overflow-hidden rounded-lg border border-gray-200 bg-white p-4 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
       >
         <div>
-          <h5 className={resourceTitle({ truncate })}>
+          <h5 className={resourceTitle({ truncate })} title={title}>
             {query ? highlightQuery(title, query) : title}
           </h5>
           <div className="grid grid-cols-6 gap-4 font-normal text-gray-700 dark:text-gray-400">
-            <div className={resourceTldr({ truncate })}>
+            <div
+              className={resourceTldr({ truncate: truncate && !showMore })}
+              ref={ref}
+            >
               <Tldr parts={tldr} query={query} />
             </div>
           </div>
         </div>
+
+        {isTruncated && (
+          <button
+            className="inline-block w-fit rounded pt-2.5 text-left text-xs font-medium leading-normal text-gray-400 hover:text-gray-600 focus:text-primary-600 focus:outline-none focus:ring-0 motion-reduce:transition-none dark:text-gray-500 dark:hover:text-gray-200"
+            onClick={onShowMoreClick}
+          >
+            Show more...
+          </button>
+        )}
 
         <div className="mt-3 md:mt-6">
           <Badge className="mr-2 inline group-hover:bg-white dark:group-hover:bg-white/10">
