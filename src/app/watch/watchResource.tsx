@@ -30,6 +30,10 @@ const VariantMapping = {
     color: 'blue',
     emoji: '📙',
   },
+  Docs: {
+    color: 'fuchsia',
+    emoji: '📚',
+  },
 } as const
 
 type Props = {
