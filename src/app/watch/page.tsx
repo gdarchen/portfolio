@@ -1,17 +1,15 @@
+import { Suspense } from 'react'
+
 import ArrowIcon from '@/components/icons/ArrowIcon'
-import { fetchWatchPages } from '@/lib/notion'
+import Spinner from '@/components/spinner/Spinner'
 
 import IntroAlert from './components/introAlert/IntroAlert'
 import Search from './components/search/Search'
-import { transformWatchResourceToDTO } from './dto/watchResource.dto'
-import WatchResources from './watchResources'
+import WatchResourcesList from './watchResourcesList'
 
 export const revalidate = 3600
 
 export default async function Page() {
-  const firstPage = await fetchWatchPages()
-  const initialResources = firstPage.results.map(transformWatchResourceToDTO)
-
   return (
     <div className="flex h-full flex-col justify-center px-8 py-32">
       {/* Title */}
@@ -33,10 +31,16 @@ export default async function Page() {
       <Search />
 
       {/* Resources */}
-      <WatchResources
-        initialResources={initialResources}
-        initialNextPage={firstPage.next_cursor}
-      />
+      <Suspense
+        fallback={
+          <div className="mt-24 flex items-center justify-center text-gray-600 dark:text-white">
+            <Spinner className="mr-2 [&>svg]:size-6" />
+            Loading...
+          </div>
+        }
+      >
+        <WatchResourcesList />
+      </Suspense>
     </div>
   )
 }
