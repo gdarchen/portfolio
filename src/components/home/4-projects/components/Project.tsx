@@ -2,7 +2,7 @@ import { FC, useState } from 'react'
 import dynamic from 'next/dynamic'
 
 import { type Project } from '../ProjectsList'
-const ReactPlayer = dynamic(() => import('react-player'), { ssr: false })
+const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false })
 
 import Image from 'next/image'
 import { clsx } from 'clsx'
