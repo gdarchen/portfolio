@@ -5,8 +5,12 @@ import { FC, useState } from 'react'
 import Spinner from '@/components/spinner/Spinner'
 import { fetchWatchPages } from '@/lib/notion'
 
-import { transformWatchResourceToDTO } from './dto/watchResource.dto'
-import { groupWatchResourcesByDate, groupWatchResourcesByMonth } from './utils'
+import { transformWatchResourceToDTO } from '../../dto/watchResource.dto'
+import {
+  groupWatchResourcesByDate,
+  groupWatchResourcesByMonth,
+} from '../../utils'
+
 import WatchResource from './watchResource'
 
 type Props = {

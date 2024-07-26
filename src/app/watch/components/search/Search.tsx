@@ -6,7 +6,7 @@ import { IoClose } from 'react-icons/io5'
 import { useDebounce } from 'use-debounce'
 import { useEventListener } from 'usehooks-ts'
 
-import WatchResource from '@/app/watch/watchResource'
+import WatchResource from '@/app/watch/components/watchResource/watchResource'
 import Spinner from '@/components/spinner/Spinner'
 import { Input } from '@headlessui/react'
 

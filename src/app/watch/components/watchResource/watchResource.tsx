@@ -11,7 +11,7 @@ import { tv } from 'tailwind-variants'
 import Badge from '@/components/badge/Badge'
 import Meteors from '@/components/cards/Meteors'
 
-import type { WatchResource } from './types'
+import type { WatchResource } from '../../types'
 
 const VariantMapping = {
   Article: {
