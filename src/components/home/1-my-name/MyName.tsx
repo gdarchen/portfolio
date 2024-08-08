@@ -49,8 +49,9 @@ const MyName: FC = () => {
         }}
         className="mt-10 font-header text-sm tracking-wider text-gray-600 dark:text-gray-400 sm:text-base md:text-lg"
       >
-        Senior Software Engineer at <a href="https://www.swile.co/">Swile</a>,
-        specialized in React, Node.js and DevOps technologies.
+        Senior Software Engineer at{' '}
+        <a href="https://contentsquare.com/">Contentsquare</a>, specialized in
+        React, Node.js and DevOps technologies.
       </motion.h3>
 
       <motion.div

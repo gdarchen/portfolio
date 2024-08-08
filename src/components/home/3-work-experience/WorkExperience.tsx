@@ -7,7 +7,7 @@ import WorkExperienceDetails from './WorkExperienceDetails'
 import { experiences } from './WorkExperienceList'
 
 const WorkExperience: FC = () => {
-  const [tab, setTab] = useState('Swile')
+  const [tab, setTab] = useState('Contentsquare')
 
   const ActiveExperience: FC = () => {
     const experience = experiences.find((exp) => exp.tabTitle === tab)
