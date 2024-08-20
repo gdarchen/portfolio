@@ -1,5 +1,5 @@
 import { IconType } from 'react-icons'
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 export type SocialMedia = {
   icon: IconType
@@ -18,5 +18,9 @@ export const socialMedia: SocialMedia[] = [
   {
     icon: FaInstagram,
     url: 'https://www.instagram.com/g_darchen/',
+  },
+  {
+    icon: FaTwitter,
+    url: 'https://twitter.com/GDarchen',
   },
 ]
