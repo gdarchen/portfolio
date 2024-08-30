@@ -10,10 +10,11 @@
 
 <div align="center">
 
-<!-- TODO: Contentsquare
-  - update screenshot in README
-  - update About
-  - new screenshot in metadata
+<!-- TODO(contentsquare): (when enough work data)
+  - update Résumé
+  - update section in Work Experience
+  - update section in AboutMe
+  - update summary on LinkedIn
 -->
 
 <!-- TODO: uncomment when public -->

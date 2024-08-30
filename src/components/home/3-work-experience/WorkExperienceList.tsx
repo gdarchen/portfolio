@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react'
+import { DiGoogleAnalytics } from 'react-icons/di'
 import {
   FaCalculator,
   FaCode,
@@ -30,6 +31,28 @@ const Arrow: FC = () => (
 )
 
 export const experiences: Experience[] = [
+  // Contentsquare
+  {
+    date: 'September 2024 - today',
+    title: 'Senior Software Engineer',
+    tabTitle: 'Contentsquare',
+    icon: <DiGoogleAnalytics />,
+    location: 'Paris (full remote), France',
+    company: 'Contentsquare',
+    description: <>{/* TODO(contentsquare): to fill */}</>,
+    technologies: [
+      'React',
+      'Node.js',
+      'Git',
+      'Kubernetes',
+      'Vue',
+      'Vite',
+      'Turborepo',
+      'pnpm',
+    ],
+    link: 'https://contentsquare.com',
+  },
+
   // Swile
   {
     date: 'July 2022 - today',
