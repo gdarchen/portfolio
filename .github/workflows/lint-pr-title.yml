@@ -1,15 +1,17 @@
 name: Lint pull request title
 
-permissions:
-  pull-requests: read
-  statuses: write
-
 on:
+  merge_group:
   pull_request:
     types:
       - opened
       - edited
       - synchronize
+
+permissions:
+  contents: write
+  pull-requests: write
+  statuses: write
 
 ## Pattern to match strings as follows:
 # feat(ui): add `Button` component
@@ -21,33 +23,28 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
-    name: lint
+    name: lint PR title
     steps:
+      # Skip PR title lint in case of a `merge_group` event as the lint
+      - name: Skip if "merge_group" event
+        if: github.event_name == 'merge_group'
+        shell: bash
+        run: |
+          echo "Skipping because the event is a 'merge_group'."
+
       - name: Validate PR title
+        if: github.event_name != 'merge_group'
         id: lint_pr_title
         uses: amannn/action-semantic-pull-request@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          types: |
-            build
-            chore
-            ci
-            docs
-            feat
-            fix
-            perf
-            refactor
-            revert
-            style
-            test
-            upgrade
-            wip
+          subjectPattern: '.+[A-Z]+-[0-9]+.*'
 
       - uses: marocchino/sticky-pull-request-comment@v2
-        # When the previous steps fails, the workflow would stop. By adding this
-        # condition you can continue the execution with the populated error message.
-        if: always() && (steps.lint_pr_title.outputs.error_message != null)
+        # When the previous steps fail, the workflow would stop. By adding this
+        # condition we can continue the execution with the populated error message.
+        if: (github.event_name != 'merge_group') && always() && (steps.lint_pr_title.outputs.error_message != null)
         with:
           header: pr-title-lint-error
           message: |
@@ -62,18 +59,20 @@ jobs:
             |____________ Type
 
             ```
+            
+            The subject should contain a reference to a JIRA ticket. Ex: CP-4340
 
             The current title does not match this format.
             <details>
               <summary>Error details 👀</summary>
-              
+            
               ```
               ${{ steps.lint_pr_title.outputs.error_message }}
               ```
             </details>
 
       # Delete a previous comment when the issue has been resolved
-      - if: ${{ steps.lint_pr_title.outputs.error_message == null }}
+      - if: github.event_name != 'merge_group' && steps.lint_pr_title.outputs.error_message == null
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           header: pr-title-lint-error
