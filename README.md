@@ -10,17 +10,8 @@
 
 <div align="center">
 
-<!-- TODO(contentsquare): (when enough work data)
-  - update Résumé
-  - update section in Work Experience
-  - update section in AboutMe
-  - update summary on LinkedIn
--->
-
-<!-- TODO: uncomment when public -->
-<!-- [![last commit](https://badgen.net/github/last-commit/gdarchen/portfolio?icon=https://simpleicons.now.sh/git/fff)](https://github.com/gdarchen/portfolio) -->
-
 ![Vercel Deploy](https://deploy-badge.vercel.app/vercel/gautier-darchen)
+[![last commit](https://badgen.net/github/last-commit/gdarchen/portfolio?icon=https://simpleicons.now.sh/git/fff)](https://github.com/gdarchen/portfolio)
 [![pnpm version](https://img.shields.io/badge/v9.4.0-F69220.svg?logo=pnpm&logoColor=white&label=pnpm)](https://pnpm.io/)
 [![node version](https://img.shields.io/badge/%3E=20.0.0-3C873A.svg?logo=node.js&logoColor=white&label=node)](https://nodejs.org/en/)
 
