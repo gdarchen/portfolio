@@ -39,16 +39,29 @@ export const experiences: Experience[] = [
     icon: <DiGoogleAnalytics />,
     location: 'Paris (full remote), France',
     company: 'Contentsquare',
-    description: <>{/* TODO(contentsquare): to fill */}</>,
+    description: (
+      <>
+        <span className="inline-flex">
+          <Arrow />
+          <span>
+            I joined the{' '}
+            <span className="text-primary">Core Product DevX Frontend</span>{' '}
+            team in charge of all cross-functional subjects related to the
+            micro-frontends architecture in place.
+          </span>
+        </span>
+      </>
+    ),
     technologies: [
       'React',
-      'Node.js',
-      'Git',
-      'Kubernetes',
       'Vue',
+      'Svelte',
+      'Node.js',
       'Vite',
+      'Vitest',
       'Turborepo',
       'pnpm',
+      'Kubernetes',
     ],
     link: 'https://contentsquare.com',
   },

@@ -102,8 +102,9 @@ const AboutMe: FC = () => {
             <div className="font-header">
               <span className="text-gray-600 dark:text-gray-400">
                 At the end of 2024, I chose to join{' '}
-                <strong>Contentsquare</strong> in a core team in order to seek
-                to have a more transversal impact.
+                <strong>Contentsquare</strong> in a core DevX team in order to
+                seek to have a more transversal impact on a complex
+                micro-frontends architecture.
               </span>
             </div>
 
