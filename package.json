@@ -14,13 +14,14 @@
     "@headlessui/react": "^2.1.2",
     "@notionhq/client": "^2.2.15",
     "@vercel/analytics": "^1.3.1",
+    "@vercel/functions": "^1.4.2",
     "@vercel/speed-insights": "^1.0.12",
     "aos": "^2.3.4",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.2.11",
-    "next": "^14.2.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "framer-motion": "12.0.0-alpha.1",
+    "next": "15.0.0-rc.1",
+    "react": "19.0.0-rc-cd22717c-20241013",
+    "react-dom": "19.0.0-rc-cd22717c-20241013",
     "react-icons": "^5.2.1",
     "react-player": "^2.16.0",
     "react-responsive": "^10.0.0",
@@ -34,13 +35,15 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.12.0",
     "@types/aos": "^3.0.7",
     "@types/node": "^20.14.8",
-    "@types/react": "^18.0.15",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
     "@typescript-eslint/parser": "^8.0.0",
     "autoprefixer": "^10.4.19",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.4",
+    "eslint": "^9.12.0",
+    "eslint-config-next": "15.0.0-rc.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",
@@ -60,5 +63,10 @@
   "lint-staged": {
     "*.ts*": "eslint --cache --fix",
     "*.{js,ts,tsx,css,md}": "prettier --write"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "npm:types-react@19.0.0-rc.1"
+    }
   }
 }
