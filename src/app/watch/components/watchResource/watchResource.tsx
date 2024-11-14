@@ -6,10 +6,14 @@ import {
   useRef,
   useState,
 } from 'react'
+import dynamic from 'next/dynamic'
 import { tv } from 'tailwind-variants'
 
 import Badge from '@/components/badge/Badge'
-import Meteors from '@/components/cards/Meteors'
+
+const Meteors = dynamic(() => import('@/components/cards/Meteors'), {
+  ssr: false,
+})
 
 import type { WatchResource } from '../../types'
 
