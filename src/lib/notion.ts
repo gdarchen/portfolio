@@ -12,7 +12,7 @@ const notion = new Client({
   auth: process.env.NOTION_TOKEN,
 })
 
-export const fetchWatchPages = cache((cursor?: string | null) => {
+export const fetchWatchPages = cache(async (cursor?: string | null) => {
   return notion.databases.query({
     database_id: process.env.NOTION_DATABASE_ID!,
     start_cursor: cursor ?? undefined,
@@ -28,7 +28,7 @@ export const fetchWatchPages = cache((cursor?: string | null) => {
   })
 })
 
-export const searchWatchPage = cache((query: string) => {
+export const searchWatchPage = cache(async (query: string) => {
   return notion.databases.query({
     database_id: process.env.NOTION_DATABASE_ID!,
     page_size: SEARCH_RESOURCES_PAGE_SIZE,
