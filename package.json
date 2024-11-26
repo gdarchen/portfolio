@@ -19,7 +19,7 @@
     "@vercel/speed-insights": "^1.0.12",
     "aos": "^2.3.4",
     "clsx": "^2.1.1",
-    "framer-motion": "12.0.0-alpha.1",
+    "framer-motion": "12.0.0-alpha.2",
     "next": "15.0.3",
     "react": "19.0.0-rc-fb9a90fa48-20240614",
     "react-dom": "19.0.0-rc-fb9a90fa48-20240614",
