@@ -55,7 +55,7 @@ importers:
         version: 10.0.0(react@19.0.0)
       react-slick:
         specifier: ^0.30.2
-        version: 0.30.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 0.30.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       serve:
         specifier: ^14.0.1
         version: 14.2.4
@@ -2378,11 +2378,11 @@ packages:
     peerDependencies:
       react: '>=16.8.0'
 
-  react-slick@0.30.2:
-    resolution: {integrity: sha512-XvQJi7mRHuiU3b9irsqS9SGIgftIfdV5/tNcURTb5LdIokRA5kIIx3l4rlq2XYHfxcSntXapoRg/GxaVOM1yfg==}
+  react-slick@0.30.3:
+    resolution: {integrity: sha512-B4x0L9GhkEWUMApeHxr/Ezp2NncpGc+5174R02j+zFiWuYboaq98vmxwlpafZfMjZic1bjdIqqmwLDcQY0QaFA==}
     peerDependencies:
-      react: ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0 || ^18.0.0
+      react: ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+      react-dom: ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   react@19.0.0:
     resolution: {integrity: sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==}
@@ -5141,7 +5141,7 @@ snapshots:
       react: 19.0.0
       shallow-equal: 3.1.0
 
-  react-slick@0.30.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  react-slick@0.30.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       classnames: 2.5.1
       enquire.js: 2.1.6
