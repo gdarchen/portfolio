@@ -1,3 +1,5 @@
+import tailwindScrollbar from 'tailwind-scrollbar'
+import tailwindScrollbarHide from 'tailwind-scrollbar-hide'
 import type { Config } from 'tailwindcss'
 import colors from 'tailwindcss/colors'
 
@@ -84,10 +86,7 @@ export default {
       },
     },
   },
-  plugins: [
-    require('tailwind-scrollbar-hide'),
-    require('tailwind-scrollbar')({ nocompatible: true }),
-  ],
+  plugins: [tailwindScrollbarHide, tailwindScrollbar({ nocompatible: true })],
   variants: {
     scrollbar: ['rounded'],
   },
