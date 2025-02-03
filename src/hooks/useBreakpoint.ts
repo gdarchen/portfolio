@@ -14,14 +14,8 @@
  *    console.log({ isAboveMd, isAboveLg, isAbove2Xl });
  */
 import { useMediaQuery } from 'react-responsive'
-import resolveConfig from 'tailwindcss/resolveConfig'
-import { Config } from 'tailwindcss/types/config'
 
-import tailwindConfig from '~/tailwind.config'
-
-const fullConfig = resolveConfig(tailwindConfig as unknown as Config)
-
-const breakpoints = fullConfig?.theme?.screens || {
+const fallbackBreakpoints = {
   xs: '480px',
   sm: '640px',
   md: '768px',
@@ -30,9 +24,30 @@ const breakpoints = fullConfig?.theme?.screens || {
 }
 
 export function useBreakpoint<K extends string>(breakpointKey: K) {
-  const breakpointValue = breakpoints[breakpointKey as keyof typeof breakpoints]
-
   const noWindow = typeof window === 'undefined'
+  let styles = noWindow
+    ? undefined
+    : window.getComputedStyle(document.documentElement)
+  let breakpointsFromConfig = styles
+    ? {
+        sm: styles.getPropertyValue('--breakpoint-sm'),
+        md: styles.getPropertyValue('--breakpoint-md'),
+        lg: styles.getPropertyValue('--breakpoint-lg'),
+        xl: styles.getPropertyValue('--breakpoint-xl'),
+        '2xl': styles.getPropertyValue('--breakpoint-2xl'),
+        '3xl': styles.getPropertyValue('--breakpoint-3xl'),
+        '4xl': styles.getPropertyValue('--breakpoint-4xl'),
+        '5xl': styles.getPropertyValue('--breakpoint-5xl'),
+      }
+    : undefined
+  const breakpoints = breakpointsFromConfig || fallbackBreakpoints
+  const breakpointValue =
+    breakpoints[
+      breakpointKey as
+        | keyof typeof fallbackBreakpoints
+        | keyof typeof breakpoints
+    ]
+
   const bool = useMediaQuery({
     query: `(max-width: ${breakpointValue})`,
   })

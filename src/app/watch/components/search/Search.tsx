@@ -85,16 +85,16 @@ const Search: FC = () => {
 
       {/* Modal */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none">
+        <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-hidden focus:outline-hidden">
           {/* Backdrop */}
           <button
-            className="fixed inset-0 bg-black/50 backdrop-blur"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm"
             onClick={closeModal}
           />
 
           <div className="absolute top-[50px] mx-auto w-[90%] max-w-3xl md:top-[110px]">
             {/* Content */}
-            <div className="relative m-auto flex max-h-[80dvh] flex-col overflow-auto overscroll-contain rounded-lg border-0 bg-white shadow-lg outline-none focus:outline-none dark:bg-gray-800">
+            <div className="relative m-auto flex max-h-[80dvh] flex-col overflow-auto overscroll-contain rounded-lg border-0 bg-white shadow-lg outline-hidden focus:outline-hidden dark:bg-gray-800">
               <div className="relative flex-auto p-6">
                 {/* Search input */}
                 <div className="flex w-full items-center justify-center">
@@ -108,13 +108,13 @@ const Search: FC = () => {
                       placeholder={PLACEHOLDER}
                       value={query}
                       onChange={onInputChange}
-                      className="w-full bg-transparent data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25 focus:outline-none"
+                      className="w-full bg-transparent focus:outline-hidden"
                     />
 
                     {isLoading && <Spinner className="[&>svg]:size-5" />}
                     {!isLoading && debouncedQuery && (
                       <button onClick={onClearInput}>
-                        <IoClose className="text-lg hover:text-primary" />
+                        <IoClose className="hover:text-primary text-lg" />
                       </button>
                     )}
                   </div>

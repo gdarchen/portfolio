@@ -82,11 +82,11 @@ const ThemeSwitch: FC = () => {
   }
 
   return (
-    <div className="relative inline-block text-left font-content">
+    <div className="font-content relative inline-block text-left">
       <Menu>
         <MenuButton
           aria-label="Use dark mode"
-          className="flex size-9 items-center justify-center rounded-full text-primary transition-transform hover:bg-hovered-light active:scale-95 dark:text-gray-300 dark:hover:bg-hovered lg:size-10 lg:text-gray-900"
+          className="text-primary hover:bg-hovered-light dark:hover:bg-hovered flex size-9 cursor-pointer items-center justify-center rounded-full transition-transform active:scale-95 lg:size-10 lg:text-gray-900 dark:text-gray-300"
         >
           {theme === 'dark' || (theme === undefined && isSystemDark) ? (
             <HiOutlineMoon className={themeIcon({ active: !!theme })} />
@@ -97,7 +97,7 @@ const ThemeSwitch: FC = () => {
 
         <MenuItems
           modal={false}
-          className="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in focus:outline-none dark:bg-gray-700"
+          className="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in dark:bg-gray-700"
         >
           <div className="py-1">
             <MenuItem>

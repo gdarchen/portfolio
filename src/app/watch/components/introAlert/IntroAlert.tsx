@@ -5,7 +5,7 @@ const IntroAlert: FC = () => {
   return (
     <div className="flex items-center justify-center">
       <div
-        className="mb-4 inline-flex w-auto rounded-lg bg-blue-50 p-4 text-blue-600 dark:bg-gray-800 dark:text-blue-400 lg:w-1/2"
+        className="mb-4 inline-flex w-auto rounded-lg bg-blue-50 p-4 text-blue-600 lg:w-1/2 dark:bg-gray-800 dark:text-blue-400"
         role="alert"
       >
         <RiInformation2Fill className="shrink-0 text-lg" />

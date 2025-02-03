@@ -52,7 +52,7 @@ const WatchResources: FC<Props> = ({ initialResources, initialNextPage }) => {
         const resourcesByWeek = groupWatchResourcesByDate(resourcesForMonth)
         return (
           <div key={month} className="mt-16">
-            <h3 className="font-header text-xl font-bold text-primary">
+            <h3 className="font-header text-primary text-xl font-bold">
               {month}
             </h3>
             <div className="h-[0.5px] w-full bg-gray-400" />
@@ -61,7 +61,7 @@ const WatchResources: FC<Props> = ({ initialResources, initialNextPage }) => {
             {Object.entries(resourcesByWeek).map(([week, resources]) => {
               return (
                 <div key={week} className="mt-8">
-                  <h4 className="font-header text-base font-medium text-secondary-light dark:text-secondary">
+                  <h4 className="font-header text-secondary-light dark:text-secondary text-base font-medium">
                     {week}
                   </h4>
                   <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
@@ -79,7 +79,7 @@ const WatchResources: FC<Props> = ({ initialResources, initialNextPage }) => {
       <div className="mt-20 flex items-center justify-center">
         {hasNextPage ? (
           <button
-            className="flex items-center justify-center rounded border border-primary bg-background-light px-4 py-3 text-primary disabled:cursor-not-allowed disabled:border-gray-500 disabled:text-gray-500 dark:bg-background sm:px-8 sm:py-4"
+            className="border-primary bg-background-light text-primary dark:bg-background flex items-center justify-center rounded-sm border px-4 py-3 disabled:cursor-not-allowed disabled:border-gray-500 disabled:text-gray-500 sm:px-8 sm:py-4"
             disabled={isLoading}
             onClick={loadMoreResources}
           >
@@ -87,7 +87,7 @@ const WatchResources: FC<Props> = ({ initialResources, initialNextPage }) => {
             {isLoading ? 'Loading...' : 'Load more resources'}
           </button>
         ) : (
-          <div className="text-sm italic text-gray-500">
+          <div className="text-sm text-gray-500 italic">
             All the content has been loaded!
           </div>
         )}

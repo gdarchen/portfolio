@@ -11,7 +11,7 @@ const MyName: FC = () => {
           opacity: { duration: 0.2 },
           y: { delay: 0.4, duration: 0.2 },
         }}
-        className="font-mono text-primary"
+        className="text-primary font-mono"
       >
         Hi, my name is
       </motion.span>
@@ -23,7 +23,7 @@ const MyName: FC = () => {
           opacity: { delay: 0.5, duration: 0.2 },
           y: { delay: 0.5, duration: 0.2 },
         }}
-        className="mt-4 text-3xl font-bold text-gray-700 dark:text-gray-300 sm:text-5xl md:text-6xl lg:text-7xl"
+        className="mt-4 text-3xl font-bold text-gray-700 sm:text-5xl md:text-6xl lg:text-7xl dark:text-gray-300"
       >
         Gautier Darchen.
       </motion.h1>
@@ -35,7 +35,7 @@ const MyName: FC = () => {
           opacity: { delay: 0.6, duration: 0.2 },
           y: { delay: 0.6, duration: 0.2 },
         }}
-        className="mt-4 text-3xl font-bold text-gray-500 dark:text-gray-400 sm:text-5xl md:text-6xl lg:text-7xl"
+        className="mt-4 text-3xl font-bold text-gray-500 sm:text-5xl md:text-6xl lg:text-7xl dark:text-gray-400"
       >
         I am passionate about web technologies.
       </motion.h2>
@@ -47,7 +47,7 @@ const MyName: FC = () => {
           opacity: { delay: 0.7, duration: 0.2 },
           y: { delay: 0.7, duration: 0.2 },
         }}
-        className="mt-10 font-header text-sm tracking-wider text-gray-600 dark:text-gray-400 sm:text-base md:text-lg"
+        className="font-header mt-10 text-sm tracking-wider text-gray-600 sm:text-base md:text-lg dark:text-gray-400"
       >
         Senior Software Engineer at{' '}
         <a href="https://contentsquare.com/">Contentsquare</a>, specialized in
@@ -64,7 +64,7 @@ const MyName: FC = () => {
         className="mt-12"
       >
         <a href="/resume.pdf" target="_blank" rel="noreferrer">
-          <button className="rounded border border-primary bg-background-light px-4 py-3 text-primary hover:bg-hovered-light dark:bg-background dark:hover:bg-hovered sm:px-8 sm:py-4">
+          <button className="border-primary bg-background-light text-primary hover:bg-hovered-light dark:bg-background dark:hover:bg-hovered rounded-sm border px-4 py-3 sm:px-8 sm:py-4">
             Download my resume
           </button>
         </a>

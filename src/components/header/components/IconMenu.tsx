@@ -20,7 +20,7 @@ const IconMenu: FC<Props> = ({ rotate, onClick }: Props) => {
               ? { y: 0.15, rotate: { delay: 0.2 } }
               : { y: { delay: 0.2 }, rotate: { duration: 0.2 } }
           }
-          className="h-0.5 w-8 rounded bg-primary"
+          className="bg-primary h-0.5 w-8 rounded-sm"
         />
       </div>
 
@@ -29,7 +29,7 @@ const IconMenu: FC<Props> = ({ rotate, onClick }: Props) => {
         transition={{ opacity: { duration: 0 } }}
         className="flex justify-end"
       >
-        <div className="h-0.5 w-6 rounded bg-primary" />
+        <div className="bg-primary h-0.5 w-6 rounded-sm" />
       </motion.div>
 
       <div className="flex justify-end">
@@ -44,7 +44,7 @@ const IconMenu: FC<Props> = ({ rotate, onClick }: Props) => {
               ? { y: 0.15, rotate: { delay: 0.2 } }
               : { y: { delay: 0.2 }, rotate: { duration: 0.2 } }
           }
-          className="h-0.5 w-4 rounded bg-primary"
+          className="bg-primary h-0.5 w-4 rounded-sm"
         />
       </div>
     </div>

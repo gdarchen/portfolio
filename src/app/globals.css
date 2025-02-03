@@ -1,13 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap')
+layer(base);
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap')
+layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
 @layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
   html {
     scroll-behavior: smooth;
+  }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Font family  */
+  --font-header: Lato, sans-serif;
+  --font-content: Lato, sans-serif;
+
+  /* Screens */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1920px;
+  --breakpoint-4xl: 2560px;
+  --breakpoint-5xl: 3840px;
+
+  /* Colors */
+  --color-primary: var(--color-blue-500);
+  --color-primary-100: #382bf0;
+  --color-primary-200: #5e43f3;
+  --color-primary-300: #7a5af5;
+  --color-primary-400: #9171f8;
+  --color-primary-500: #a688fa;
+  --color-primary-600: #ba9ffb;
+
+  --color-secondary: var(--color-blue-200);
+  --color-secondary-light: var(--color-blue-400);
+
+  --color-mobile-menu: #0f141d;
+  --color-mobile-menu-light: var(--color-gray-100);
+
+  --color-background: #03080f;
+  --color-background-light: #ffffff;
+  --color-background-secondary: #112340;
+  --color-background-secondary-light: var(--color-gray-100);
+
+  --color-hovered: #153040;
+  --color-hovered-light: #ececec;
+
+  --color-code: #6e768166;
+  --color-code-light: #e4e4e4;
+
+  /* Animations */
+  --animate-meteor-effect: meteor 5s linear infinite;
+
+  /* Keyframes */
+  @keyframes meteor {
+    0% {
+      transform: rotate(215deg) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(215deg) translateX(-500px);
+      opacity: 0;
+    }
   }
 }
 
@@ -37,7 +106,7 @@ html.dark {
 a {
   color: inherit;
   text-decoration: none;
-  @apply font-medium text-blue-600 hover:text-primary;
+  @apply hover:text-primary font-medium text-blue-600;
 }
 
 .dark a {
@@ -61,25 +130,25 @@ a {
 }
 
 .slick-prev {
-  @apply md:!translate-x-[100px] lg:!translate-x-[130px];
+  @apply md:translate-x-[100px]! lg:translate-x-[130px]!;
 }
 
 .slick-next {
-  @apply md:!-translate-x-[150px] lg:!-translate-x-[180px];
+  @apply md:-translate-x-[150px]! lg:-translate-x-[180px]!;
 }
 
 .slick-slide img {
-  @apply rounded;
+  @apply rounded-sm;
 }
 
 .slick-dots li button:before {
-  @apply !text-gray-600;
+  @apply text-gray-600!;
 }
 
 .dark .slick-dots li button:before {
-  @apply !text-gray-100;
+  @apply text-gray-100!;
 }
 
 .slick-dots li.slick-active button:before {
-  @apply !text-primary;
+  @apply text-primary!;
 }
