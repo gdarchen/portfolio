@@ -34,39 +34,39 @@ const Logo: FC = () => {
       >
         <motion.span
           initial={{ x: 1 }}
-          className="absolute flex size-full items-center justify-center font-header text-sm text-primary"
+          className="font-header text-primary absolute flex size-full items-center justify-center text-sm"
         >
           GD
         </motion.span>
 
         <motion.div
           animate={{ rotate: -30, y: 5 }}
-          className="h-1 w-6 rounded bg-primary"
+          className="bg-primary h-1 w-6 rounded-sm"
         />
 
         <motion.div
           animate={{ rotate: 90, x: -10, y: 18 }}
-          className="h-1 w-6 rounded bg-primary"
+          className="bg-primary h-1 w-6 rounded-sm"
         />
 
         <motion.div
           animate={{ rotate: 30, y: 31 }}
-          className="h-1 w-6 rounded bg-primary"
+          className="bg-primary h-1 w-6 rounded-sm"
         />
 
         <motion.div
           animate={{ rotate: -30, y: 27, x: 19 }}
-          className="h-1 w-6 rounded bg-primary"
+          className="bg-primary h-1 w-6 rounded-sm"
         />
 
         <motion.div
           animate={{ rotate: 30, x: 19, y: -10 }}
-          className="h-1 w-6 rounded bg-primary"
+          className="bg-primary h-1 w-6 rounded-sm"
         />
 
         <motion.div
           animate={{ rotate: 90, x: 28, y: 2 }}
-          className="h-1 w-6 rounded bg-primary"
+          className="bg-primary h-1 w-6 rounded-sm"
         />
       </motion.div>
     </button>

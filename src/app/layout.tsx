@@ -85,7 +85,7 @@ const RootLayout: FC<Props> = ({ children }) => {
         <CSQLiteScript />
       </head>
       <body>
-        <div className="relative min-h-screen w-full snap-mandatory bg-background-light dark:bg-background">
+        <div className="bg-background-light dark:bg-background relative min-h-screen w-full snap-mandatory">
           <Header />
           {children}
         </div>

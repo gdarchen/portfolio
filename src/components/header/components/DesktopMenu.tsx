@@ -87,7 +87,7 @@ const DesktopMenu: FC = () => {
           initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: 'spring', duration: 1.2, delay: 1.2 }}
-          className="border-spacing-2 rounded-sm border border-primary px-3 py-2 text-primary hover:bg-hovered-light dark:hover:bg-hovered"
+          className="border-primary text-primary hover:bg-hovered-light dark:hover:bg-hovered border-spacing-2 cursor-pointer rounded-xs border px-3 py-2"
         >
           Resume
         </motion.button>

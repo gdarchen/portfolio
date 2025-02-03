@@ -15,10 +15,10 @@ export default async function Page() {
       {/* Title */}
       <section className="mb-6 flex flex-row items-center justify-center">
         <div className="flex flex-row items-center">
-          <ArrowIcon className="size-4 flex-none text-primary md:h-6 md:w-5" />
+          <ArrowIcon className="text-primary size-4 flex-none md:h-6 md:w-5" />
         </div>
 
-        <span className="text-nowrap px-3 text-lg font-bold tracking-wider text-gray-900 opacity-85 dark:text-gray-200 md:text-2xl">
+        <span className="px-3 text-lg font-bold tracking-wider text-nowrap text-gray-900 opacity-85 md:text-2xl dark:text-gray-200">
           Technology watch
         </span>
         <div className="h-[0.5px] w-full min-w-16 bg-gray-400 sm:w-44 lg:w-80" />

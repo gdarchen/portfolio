@@ -15,20 +15,20 @@ const WorkExperienceDetails: FC<Props> = ({ experience }) => {
       <div className="flex flex-col space-y-2">
         {/* Title */}
         <div className="flex items-center justify-between">
-          <span className="text-sm tracking-wide text-gray-600 dark:text-gray-100 sm:text-lg">
+          <span className="text-sm tracking-wide text-gray-600 sm:text-lg dark:text-gray-100">
             {experience.title}
             {experience.company && (
-              <span className="ml-2 text-primary">@ {experience.company}</span>
+              <span className="text-primary ml-2">@ {experience.company}</span>
             )}
           </span>
 
-          <span className="text-sm tracking-wide text-gray-600 dark:text-gray-100 sm:text-lg">
+          <span className="text-sm tracking-wide text-gray-600 sm:text-lg dark:text-gray-100">
             {experience.icon}
           </span>
         </div>
 
         {/* Date */}
-        <span className="font-mono text-sm text-secondary-light dark:text-secondary">
+        <span className="text-secondary-light dark:text-secondary font-mono text-sm">
           {experience.date}
         </span>
 
@@ -41,7 +41,7 @@ const WorkExperienceDetails: FC<Props> = ({ experience }) => {
         {/* Link */}
         {experience.link && (
           <span
-            className="font-mono text-xs text-primary hover:cursor-pointer"
+            className="text-primary font-mono text-xs hover:cursor-pointer"
             onClick={() => window.open(experience.link, '_blank')}
           >
             {experience.link.split('://')[1]}
@@ -61,7 +61,7 @@ const WorkExperienceDetails: FC<Props> = ({ experience }) => {
         <div>
           {experience.technologies.map((tech) => {
             return (
-              <Badge key={tech} className="mb-2 mr-2">
+              <Badge key={tech} className="mr-2 mb-2">
                 {tech}
               </Badge>
             )

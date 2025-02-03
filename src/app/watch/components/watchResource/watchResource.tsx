@@ -63,7 +63,7 @@ const resourceTldr = tv({
 const tldr = tv({
   variants: {
     code: {
-      true: 'm-0 whitespace-break-spaces rounded-sm bg-code-light px-1 py-px text-[90%] dark:bg-code',
+      true: 'm-0 whitespace-break-spaces rounded-xs bg-code-light px-1 py-px text-[90%] dark:bg-code',
     },
     bold: { true: 'font-bold' },
     italic: { true: 'italic' },
@@ -161,13 +161,13 @@ const WatchResource: FC<Props> = ({ resource, query, truncate = true }) => {
   return (
     <div className="group relative flex">
       {shiny && (
-        <div className="absolute -inset-2 z-0 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 opacity-25 blur transition duration-1000 will-change-transform group-hover:opacity-100 group-hover:duration-200 md:-inset-1" />
+        <div className="absolute -inset-2 z-0 rounded-lg bg-linear-to-r from-purple-600 to-pink-600 opacity-25 blur-sm transition duration-1000 will-change-transform group-hover:opacity-100 group-hover:duration-200 md:-inset-1" />
       )}
       <a
         href={url}
         target="_blank"
         rel="noreferrer"
-        className="relative z-10 flex w-full flex-col justify-between overflow-hidden rounded-lg border border-gray-200 bg-white p-4 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+        className="relative z-10 flex w-full flex-col justify-between overflow-hidden rounded-lg border border-gray-200 bg-white p-4 shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
       >
         <div>
           <h5 className={resourceTitle({ truncate })} title={title}>
@@ -185,7 +185,7 @@ const WatchResource: FC<Props> = ({ resource, query, truncate = true }) => {
 
         {isTruncated && (
           <button
-            className="inline-block w-fit rounded pt-2.5 text-left text-xs font-medium leading-normal text-gray-400 hover:text-gray-600 focus:text-primary-600 focus:outline-none focus:ring-0 motion-reduce:transition-none dark:text-gray-500 dark:hover:text-gray-200"
+            className="focus:text-primary-600 inline-block w-fit rounded-sm pt-2.5 text-left text-xs leading-normal font-medium text-gray-400 hover:text-gray-600 focus:ring-0 focus:outline-hidden motion-reduce:transition-none dark:text-gray-500 dark:hover:text-gray-200"
             onClick={onShowMoreClick}
           >
             Show more...
@@ -200,7 +200,7 @@ const WatchResource: FC<Props> = ({ resource, query, truncate = true }) => {
           <ResourceType type={type} />
         </div>
         {shiny && (
-          <div>
+          <div className="pointer-events-none absolute -m-4 size-full">
             <Meteors number={25} />
           </div>
         )}

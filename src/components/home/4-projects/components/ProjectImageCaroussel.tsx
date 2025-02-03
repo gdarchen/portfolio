@@ -20,7 +20,7 @@ export const ProjectImageCaroussel: FC<Props> = ({ images }) => {
       <div>
         <Slider {...settings}>
           {images.map((image, index) => (
-            <div key={image} className="outline-none">
+            <div key={image} className="outline-hidden">
               <Image
                 src={image}
                 alt={`Image number ${index}`}

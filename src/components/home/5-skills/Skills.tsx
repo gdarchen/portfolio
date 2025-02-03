@@ -20,21 +20,21 @@ const Skills: FC = () => {
         {/* Title */}
         <section className="flex w-full flex-row items-center md:w-auto">
           <div className="flex flex-row items-center">
-            <ArrowIcon className="size-4 flex-none text-primary md:h-6 md:w-5" />
-            <span className="font-sans text-sm text-primary sm:text-xl">
+            <ArrowIcon className="text-primary size-4 flex-none md:h-6 md:w-5" />
+            <span className="text-primary font-sans text-sm sm:text-xl">
               {' '}
               04.
             </span>
           </div>
 
-          <span className="text-nowrap px-3 text-lg font-bold tracking-wider text-gray-900 opacity-85 dark:text-gray-200 md:text-2xl">
+          <span className="px-3 text-lg font-bold tracking-wider text-nowrap text-gray-900 opacity-85 md:text-2xl dark:text-gray-200">
             Skills
           </span>
           <div className="h-[0.2px] w-full bg-gray-400 sm:w-44 lg:w-80" />
         </section>
 
         {/* Skills */}
-        <section className="flex w-full flex-col !items-stretch justify-center space-y-4 md:flex-row md:items-start md:justify-center md:space-x-4 md:space-y-0">
+        <section className="flex w-full flex-col items-stretch! justify-center space-y-4 md:flex-row md:items-start md:justify-center md:space-y-0 md:space-x-4">
           {skillsByLevel.map((level) => {
             const transition = {
               y: -3,
@@ -46,7 +46,7 @@ const Skills: FC = () => {
               <div
                 key={level.title}
                 className={clsx(
-                  'block max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700',
+                  'block max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700',
                   level.className,
                 )}
               >
@@ -60,12 +60,12 @@ const Skills: FC = () => {
                       className="group relative w-min hover:z-50"
                     >
                       <motion.div whileHover={transition} whileTap={transition}>
-                        <span className="cursor-pointer hover:text-primary">
+                        <span className="hover:text-primary cursor-pointer">
                           {skill.icon}
                         </span>
                       </motion.div>
                       <Badge
-                        className="invisible absolute left-1/2 -translate-x-2/4 translate-y-2 text-nowrap font-mono ring-1 ring-primary backdrop-blur-md group-hover:visible dark:text-blue-300"
+                        className="ring-primary invisible absolute left-1/2 -translate-x-2/4 translate-y-2 font-mono text-nowrap ring-1 backdrop-blur-md group-hover:visible dark:text-blue-300"
                         variant="blue"
                       >
                         {skill.text}

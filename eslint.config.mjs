@@ -16,8 +16,10 @@ const compat = new FlatCompat({
   allConfig: js.configs.all,
 })
 
+// TODO: reinstall eslint-plugin-tailwindcss when compatible with tailwind@4
+// cf. this issue: https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/325
 const config = [
-  ...compat.extends('next', 'plugin:tailwindcss/recommended', 'prettier'),
+  ...compat.extends('next', 'prettier'),
   {
     plugins: {
       'unused-imports': unusedImports,
@@ -29,7 +31,6 @@ const config = [
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
       'prettier/prettier': 2,
-      'tailwindcss/classnames-order': 'off',
     },
   },
   {

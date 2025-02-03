@@ -19,21 +19,21 @@ const AboutMe: FC = () => {
         {/* Title */}
         <section className="flex flex-row items-center">
           <div className="flex flex-row items-center">
-            <ArrowIcon className="size-4 flex-none text-primary md:h-6 md:w-5" />
-            <span className="font-sans text-sm text-primary sm:text-xl">
+            <ArrowIcon className="text-primary size-4 flex-none md:h-6 md:w-5" />
+            <span className="text-primary font-sans text-sm sm:text-xl">
               {' '}
               01.
             </span>
           </div>
 
-          <span className="text-nowrap px-3 text-lg font-bold tracking-wider text-gray-900 opacity-85 dark:text-gray-200 md:text-2xl">
+          <span className="px-3 text-lg font-bold tracking-wider text-nowrap text-gray-900 opacity-85 md:text-2xl dark:text-gray-200">
             About Me
           </span>
           <div className="h-[0.2px] w-full bg-gray-400 sm:w-44 lg:w-80" />
         </section>
 
         {/* Description */}
-        <div className="flex w-full flex-col space-y-8 sm:space-x-2 md:flex-row md:space-x-8 md:space-y-0">
+        <div className="flex w-full flex-col space-y-8 sm:space-x-2 md:flex-row md:space-y-0 md:space-x-8">
           <div className="w-full space-y-4 text-justify text-sm md:w-7/12">
             <div className="font-header">
               <span className="text-gray-600 dark:text-gray-400">
@@ -116,7 +116,7 @@ const AboutMe: FC = () => {
               </span>
             </div>
 
-            <div className="flex flex-row space-x-16 font-header tracking-wide">
+            <div className="font-header flex flex-row space-x-16 tracking-wide">
               <div className="flex flex-row items-center space-x-2">
                 <div className="flex flex-col space-y-4 text-sm sm:text-base">
                   {technologies[0].map((tech) => {
@@ -125,8 +125,8 @@ const AboutMe: FC = () => {
                         key={tech}
                         className="flex flex-row items-center space-x-2"
                       >
-                        <ArrowIcon className="size-4 text-primary" />
-                        <span className="text-xs text-gray-600 dark:text-gray-400 sm:text-sm">
+                        <ArrowIcon className="text-primary size-4" />
+                        <span className="text-xs text-gray-600 sm:text-sm dark:text-gray-400">
                           {tech}
                         </span>
                       </div>
@@ -143,8 +143,8 @@ const AboutMe: FC = () => {
                         key={tech}
                         className="flex flex-row items-center space-x-2"
                       >
-                        <ArrowIcon className="size-4 text-primary" />
-                        <span className="text-xs text-gray-600 dark:text-gray-400 sm:text-sm">
+                        <ArrowIcon className="text-primary size-4" />
+                        <span className="text-xs text-gray-600 sm:text-sm dark:text-gray-400">
                           {tech}
                         </span>
                       </div>
@@ -157,10 +157,10 @@ const AboutMe: FC = () => {
 
           {/* Image (desktop) */}
           <div className="group relative hidden md:block md:size-72 lg:size-96">
-            <div className="absolute size-5/6 translate-x-5 translate-y-5 rounded border-2 border-primary duration-300 group-hover:translate-x-3 group-hover:translate-y-3" />
+            <div className="border-primary absolute size-5/6 translate-x-5 translate-y-5 rounded-sm border-2 duration-300 group-hover:translate-x-3 group-hover:translate-y-3" />
 
-            <div className="absolute size-5/6 overflow-hidden rounded">
-              <div className="absolute size-full overflow-hidden rounded-lg bg-primary opacity-10 duration-300 group-hover:opacity-0" />
+            <div className="absolute size-5/6 overflow-hidden rounded-sm">
+              <div className="bg-primary absolute size-full overflow-hidden rounded-lg opacity-10 duration-300 group-hover:opacity-0" />
               <Image
                 src="/img/profile.jpg"
                 alt="Portfolio profile"
@@ -172,8 +172,8 @@ const AboutMe: FC = () => {
 
           {/* Image (mobile) */}
           <div className="relative flex h-48 w-full items-center justify-center md:hidden">
-            <div className="absolute h-full w-48 translate-x-5 translate-y-5 rounded border-2 border-primary" />
-            <div className="absolute h-full w-48 overflow-hidden rounded">
+            <div className="border-primary absolute h-full w-48 translate-x-5 translate-y-5 rounded-sm border-2" />
+            <div className="absolute h-full w-48 overflow-hidden rounded-sm">
               <Image
                 src="/img/profile.jpg"
                 className="rounded-lg object-cover"
@@ -181,7 +181,7 @@ const AboutMe: FC = () => {
                 fill
               />
             </div>
-            <div className="absolute h-full w-48 overflow-hidden rounded-lg bg-primary opacity-10 md:opacity-60" />
+            <div className="bg-primary absolute h-full w-48 overflow-hidden rounded-lg opacity-10 md:opacity-60" />
           </div>
         </div>
       </div>

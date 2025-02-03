@@ -27,7 +27,7 @@ export type Experience = {
 }
 
 const Arrow: FC = () => (
-  <ArrowIcon className="mr-2 h-5 w-4 flex-none text-primary" />
+  <ArrowIcon className="text-primary mr-2 h-5 w-4 flex-none" />
 )
 
 export const experiences: Experience[] = [

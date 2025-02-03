@@ -30,10 +30,10 @@ const MobileMenu: FC<Props> = ({ hidden, onClose }) => {
     >
       <div
         onClick={onClose}
-        className="h-full w-1/4 bg-mobile-menu-light/30 backdrop-blur-sm hover:cursor-pointer dark:bg-mobile-menu/30"
+        className="bg-mobile-menu-light/30 dark:bg-mobile-menu/30 h-full w-1/4 backdrop-blur-xs hover:cursor-pointer"
       />
 
-      <div className="flex h-full w-3/4 flex-col items-center justify-center space-y-8 bg-mobile-menu-light font-sans dark:bg-mobile-menu">
+      <div className="bg-mobile-menu-light dark:bg-mobile-menu flex h-full w-3/4 flex-col items-center justify-center space-y-8 font-sans">
         <Link href="/#about-me" onClick={onClose} className={menuItemLink()}>
           <span className={menuItemDigit()}>01.</span>
           <span className={menuItemText()}>About</span>
@@ -73,7 +73,7 @@ const MobileMenu: FC<Props> = ({ hidden, onClose }) => {
         </Link>
 
         <a href="/resume.pdf" target="_blank" rel="noreferrer">
-          <button className="rounded border border-primary px-5 py-2 font-content text-xs text-primary hover:bg-hovered-light dark:hover:bg-hovered sm:px-10 sm:py-4">
+          <button className="border-primary font-content text-primary hover:bg-hovered-light dark:hover:bg-hovered rounded-sm border px-5 py-2 text-xs sm:px-10 sm:py-4">
             Resume
           </button>
         </a>

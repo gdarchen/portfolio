@@ -28,14 +28,14 @@ const WorkExperience: FC = () => {
       {/* Title */}
       <section className="flex flex-row items-center">
         <div className="flex flex-row items-center">
-          <ArrowIcon className="size-4 flex-none text-primary md:h-6 md:w-5" />
-          <span className="font-sans text-sm text-primary sm:text-xl">
+          <ArrowIcon className="text-primary size-4 flex-none md:h-6 md:w-5" />
+          <span className="text-primary font-sans text-sm sm:text-xl">
             {' '}
             02.
           </span>
         </div>
 
-        <span className="px-3 text-lg font-bold tracking-wider text-gray-900 opacity-85 dark:text-gray-200 md:text-2xl">
+        <span className="px-3 text-lg font-bold tracking-wider text-gray-900 opacity-85 md:text-2xl dark:text-gray-200">
           <span className="hidden text-nowrap md:inline">
             Work experience &amp; Education
           </span>
@@ -47,7 +47,7 @@ const WorkExperience: FC = () => {
       </section>
 
       {/* Experiences */}
-      <section className="flex w-full flex-col items-center justify-center space-y-4 md:flex-row md:items-start md:justify-center md:space-x-4 md:space-y-0 md:max-lg:w-5/6">
+      <section className="flex w-full flex-col items-center justify-center space-y-4 md:flex-row md:items-start md:justify-center md:space-y-0 md:space-x-4 md:max-lg:w-5/6">
         {/* Tabs */}
         <WorkExperienceTabs activeTab={tab} onTabClick={setTab} />
 

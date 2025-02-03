@@ -14,14 +14,14 @@ const Projects: FC = () => {
       {/* Title */}
       <section className="flex flex-row items-center">
         <div className="flex flex-row items-center">
-          <ArrowIcon className="size-4 flex-none text-primary md:h-6 md:w-5" />
-          <span className="font-sans text-sm text-primary sm:text-xl">
+          <ArrowIcon className="text-primary size-4 flex-none md:h-6 md:w-5" />
+          <span className="text-primary font-sans text-sm sm:text-xl">
             {' '}
             03.
           </span>
         </div>
 
-        <span className="text-nowrap px-3 text-lg font-bold tracking-wider text-gray-900 opacity-85 dark:text-gray-200 md:text-2xl">
+        <span className="px-3 text-lg font-bold tracking-wider text-nowrap text-gray-900 opacity-85 md:text-2xl dark:text-gray-200">
           Projects
         </span>
         <div className="h-[0.2px] w-full bg-gray-400 sm:w-44 lg:w-80" />

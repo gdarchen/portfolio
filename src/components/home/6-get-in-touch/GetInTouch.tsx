@@ -6,7 +6,7 @@ import { tv } from 'tailwind-variants'
 import ArrowIcon from '@/components/icons/ArrowIcon'
 
 const button = tv({
-  base: 'rounded border-[1.5px] border-primary p-4 font-mono text-lg text-primary hover:bg-hovered-light dark:hover:bg-hovered',
+  base: 'rounded-sm border-[1.5px] border-primary p-4 font-mono text-lg text-primary hover:bg-hovered-light dark:hover:bg-hovered',
 })
 
 const GetInTouch: FC = () => {
@@ -14,22 +14,22 @@ const GetInTouch: FC = () => {
     <div
       id="contact"
       data-aos="fade-up"
-      className="flex h-48 w-full flex-col items-center space-y-4 bg-background-light dark:bg-background md:h-64"
+      className="bg-background-light dark:bg-background flex h-48 w-full flex-col items-center space-y-4 md:h-64"
     >
       {/* Title */}
       <div className="flex flex-row items-center">
-        <ArrowIcon className="size-5 flex-none text-primary md:h-6 md:w-5" />
+        <ArrowIcon className="text-primary size-5 flex-none md:h-6 md:w-5" />
         <div className="flex flex-row items-center space-x-2">
-          <span className="font-sans text-sm text-primary sm:text-base">
+          <span className="text-primary font-sans text-sm sm:text-base">
             {' '}
             05.
           </span>
-          <span className="font-sans text-base text-primary">Contact</span>
+          <span className="text-primary font-sans text-base">Contact</span>
         </div>
       </div>
 
       {/* Get in touch */}
-      <span className="text-3xl font-bold tracking-wider text-gray-900 opacity-85 dark:text-gray-200 sm:text-4xl">
+      <span className="text-3xl font-bold tracking-wider text-gray-900 opacity-85 sm:text-4xl dark:text-gray-200">
         Get In Touch
       </span>
       <div className="pt-4">
