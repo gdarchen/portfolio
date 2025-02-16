@@ -61,7 +61,7 @@ importers:
         version: 14.2.4
       tailwind-variants:
         specifier: ^0.3.0
-        version: 0.3.1(tailwindcss@4.0.5)
+        version: 0.3.1(tailwindcss@4.0.6)
       use-debounce:
         specifier: ^10.0.1
         version: 10.0.4(react@19.0.0)
@@ -80,7 +80,7 @@ importers:
         version: 9.20.0
       '@tailwindcss/postcss':
         specifier: ^4.0.0
-        version: 4.0.5
+        version: 4.0.6
       '@testing-library/dom':
         specifier: ^10.4.0
         version: 10.4.0
@@ -143,7 +143,7 @@ importers:
         version: 0.6.11(prettier@3.5.0)
       tailwindcss:
         specifier: ^4.0.0
-        version: 4.0.5
+        version: 4.0.6
       typescript:
         specifier: ^5.5.2
         version: 5.7.3
@@ -964,8 +964,8 @@ packages:
     resolution: {integrity: sha512-lVyKV2y58UE9CeKVcYykULe9QaE1dtKdxDEdrTPIdbzRgBk6bdxHNAoDqvcqXbIGXubn3VOl1O/CFF77v/EqSA==}
     engines: {node: '>= 10'}
 
-  '@tailwindcss/postcss@4.0.5':
-    resolution: {integrity: sha512-U7IPb+KMASETtUvISwePM+1h+jLQspXf2ncfX/LmP/4AaH7b7DJQhqXzDCaJQd/MIh54dRUO93i9q4+Xm7dlVg==}
+  '@tailwindcss/postcss@4.0.6':
+    resolution: {integrity: sha512-noTaGPHjGCXTCc487TWnfAEN0VMjqDAecssWDOsfxV2hFrcZR0AHthX7IdY/0xHTg/EtpmIPdssddlZ5/B7JnQ==}
 
   '@tanstack/react-virtual@3.10.8':
     resolution: {integrity: sha512-VbzbVGSsZlQktyLrP5nxE+vE1ZR+U0NFAWPbJLoG2+DKPwd2D7dVICTVIIaYlJqX1ZCEnYDbaOpmMwbsyhBoIA==}
@@ -3211,9 +3211,6 @@ packages:
     peerDependencies:
       tailwindcss: '*'
 
-  tailwindcss@4.0.5:
-    resolution: {integrity: sha512-DZZIKX3tA23LGTjHdnwlJOTxfICD1cPeykLLsYF1RQBI9QsCR3i0szohJfJDVjr6aNRAIio5WVO7FGB77fRHwg==}
-
   tailwindcss@4.0.6:
     resolution: {integrity: sha512-mysewHYJKaXgNOW6pp5xon/emCsfAMnO8WMaGKZZ35fomnR/T5gYnRg2/yRTTrtXiEl1tiVkeRt0eMO6HxEZqw==}
 
@@ -4270,14 +4267,14 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.0.6
       '@tailwindcss/oxide-win32-x64-msvc': 4.0.6
 
-  '@tailwindcss/postcss@4.0.5':
+  '@tailwindcss/postcss@4.0.6':
     dependencies:
       '@alloc/quick-lru': 5.2.0
       '@tailwindcss/node': 4.0.6
       '@tailwindcss/oxide': 4.0.6
       lightningcss: 1.29.1
       postcss: 8.5.2
-      tailwindcss: 4.0.5
+      tailwindcss: 4.0.6
 
   '@tanstack/react-virtual@3.10.8(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
@@ -6664,12 +6661,10 @@ snapshots:
 
   tailwind-merge@2.5.4: {}
 
-  tailwind-variants@0.3.1(tailwindcss@4.0.5):
+  tailwind-variants@0.3.1(tailwindcss@4.0.6):
     dependencies:
       tailwind-merge: 2.5.4
-      tailwindcss: 4.0.5
-
-  tailwindcss@4.0.5: {}
+      tailwindcss: 4.0.6
 
   tailwindcss@4.0.6: {}
 
