@@ -16,7 +16,7 @@ importers:
         version: 2.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@notionhq/client':
         specifier: ^2.2.15
-        version: 2.2.16
+        version: 2.2.17
       '@vercel/analytics':
         specifier: ^1.3.1
         version: 1.5.0(next@15.1.7(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
@@ -742,8 +742,8 @@ packages:
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
 
-  '@notionhq/client@2.2.16':
-    resolution: {integrity: sha512-3GlkfhLw8+Jw8U2iFEmHA6WfCgYhZCXLxgPdqDJkYMFotELNpQO+yGSy2QWURsG8ndu21sLt+FEOfDbNcCtFMg==}
+  '@notionhq/client@2.2.17':
+    resolution: {integrity: sha512-whkUc2RFAk7Vo93todfwsK6bxEHrBg4JSUHN+8cvopZGKsnU8aVL4JtJ6W2cexRz0Bp0AfznHsY7eD8/vNgMCw==}
     engines: {node: '>=12'}
 
   '@pkgr/core@0.1.1':
@@ -4138,7 +4138,7 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
-  '@notionhq/client@2.2.16':
+  '@notionhq/client@2.2.17':
     dependencies:
       '@types/node-fetch': 2.6.12
       node-fetch: 2.7.0
