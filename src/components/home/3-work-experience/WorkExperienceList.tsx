@@ -34,7 +34,7 @@ export const experiences: Experience[] = [
   // Contentsquare
   {
     date: 'September 2024 - today',
-    title: 'Senior Software Engineer',
+    title: 'Senior Software Engineer 2',
     tabTitle: 'Contentsquare',
     icon: <DiGoogleAnalytics />,
     location: 'Paris (full remote), France',
@@ -45,9 +45,9 @@ export const experiences: Experience[] = [
           <Arrow />
           <span>
             I joined the{' '}
-            <span className="text-primary">Core Product DevX Frontend</span>{' '}
-            team in charge of all cross-functional subjects related to the
-            micro-frontends architecture in place.
+            <span className="text-primary">Application Core Frontend</span> team
+            in charge of all cross-functional subjects related to the
+            micro-frontends architecture in place and the DevX.
           </span>
         </span>
       </>

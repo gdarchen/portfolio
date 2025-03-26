@@ -49,7 +49,7 @@ const MyName: FC = () => {
         }}
         className="font-header mt-10 text-sm tracking-wider text-gray-600 sm:text-base md:text-lg dark:text-gray-400"
       >
-        Senior Software Engineer at{' '}
+        Senior Software Engineer 2 at{' '}
         <a href="https://contentsquare.com/">Contentsquare</a>, specialized in
         React, Node.js and DevOps technologies.
       </motion.h3>
