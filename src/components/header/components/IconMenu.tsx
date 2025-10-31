@@ -17,7 +17,7 @@ const IconMenu: FC<Props> = ({ rotate, onClick }: Props) => {
           animate={rotate ? { y: 10, rotate: 45 } : { rotate: 0, y: 0 }}
           transition={
             rotate
-              ? { y: 0.15, rotate: { delay: 0.2 } }
+              ? { y: { duration: 0.15 }, rotate: { delay: 0.2 } }
               : { y: { delay: 0.2 }, rotate: { duration: 0.2 } }
           }
           className="bg-primary h-0.5 w-8 rounded-sm"
@@ -41,7 +41,7 @@ const IconMenu: FC<Props> = ({ rotate, onClick }: Props) => {
           }
           transition={
             rotate
-              ? { y: 0.15, rotate: { delay: 0.2 } }
+              ? { y: { duration: 0.15 }, rotate: { delay: 0.2 } }
               : { y: { delay: 0.2 }, rotate: { duration: 0.2 } }
           }
           className="bg-primary h-0.5 w-4 rounded-sm"

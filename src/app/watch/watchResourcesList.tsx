@@ -1,6 +1,6 @@
 import { fetchWatchPages } from '@/lib/notion'
 
-import WatchResources from './components/watchResource/watchResources'
+import WatchResourcesViewToggle from './components/watchResource/watchResourcesViewToggle'
 import { transformWatchResourceToDTO } from './dto/watchResource.dto'
 
 export default async function WatchResourcesList() {
@@ -8,7 +8,7 @@ export default async function WatchResourcesList() {
   const initialResources = firstPage.results.map(transformWatchResourceToDTO)
 
   return (
-    <WatchResources
+    <WatchResourcesViewToggle
       initialResources={initialResources}
       initialNextPage={firstPage.next_cursor}
     />

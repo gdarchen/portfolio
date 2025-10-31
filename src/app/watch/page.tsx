@@ -11,9 +11,9 @@ export const revalidate = 3600
 
 export default async function Page() {
   return (
-    <div className="flex h-full flex-col justify-center px-8 py-32">
+    <div className="flex h-full flex-col justify-center px-0 py-32 sm:px-8">
       {/* Title */}
-      <section className="mb-6 flex flex-row items-center justify-center">
+      <section className="mb-6 flex flex-row items-center justify-center px-8 sm:px-0">
         <div className="flex flex-row items-center">
           <ArrowIcon className="text-primary size-4 flex-none md:h-6 md:w-5" />
         </div>
@@ -25,10 +25,14 @@ export default async function Page() {
       </section>
 
       {/* Alert block */}
-      <IntroAlert />
+      <div className="px-8 sm:px-0">
+        <IntroAlert />
+      </div>
 
       {/* Search */}
-      <Search />
+      <div className="px-8 sm:px-0">
+        <Search />
+      </div>
 
       {/* Resources */}
       <Suspense
