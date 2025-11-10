@@ -15,6 +15,14 @@ import pic1 from './projects/PIC/pic-1.png'
 import pic2 from './projects/PIC/pic-2.png'
 import pic3 from './projects/PIC/pic-3.png'
 import elec from './projects/PortableConsole/console1.png'
+import raycastTempo1 from './projects/raycast-tempo/raycastTempo1.png'
+import raycastTempo2 from './projects/raycast-tempo/raycastTempo2.png'
+import raycastTempo3 from './projects/raycast-tempo/raycastTempo3.png'
+import raycastTempo4 from './projects/raycast-tempo/raycastTempo4.png'
+import raycastTempo5 from './projects/raycast-tempo/raycastTempo5.png'
+import raycastTempo6 from './projects/raycast-tempo/raycastTempo6.png'
+import raycastTempo7 from './projects/raycast-tempo/raycastTempo7.png'
+import raycastTempo8 from './projects/raycast-tempo/raycastTempo8.png'
 import reacli1 from './projects/reacli/reacli1.png'
 import reacli2 from './projects/reacli/reacli2.png'
 import reacli3 from './projects/reacli/reacli3.png'
@@ -44,6 +52,42 @@ export type Project = {
 }
 
 const projects: Project[] = [
+  /* Raycast Tempo extension */
+  {
+    key: 'raycast-tempo',
+    dates: 'November 2025',
+    title: 'Raycast Tempo Extension',
+    location: 'Capbreton, France',
+    description: (
+      <div>
+        <div className="mb-2">
+          A <span className="text-primary">Raycast</span> extension for managing{' '}
+          <span className="text-primary">Tempo</span> worklogs directly from
+          your keyboard.
+        </div>
+        <div className="mb-2">
+          <span className="text-primary">Key features:</span> quickly log work
+          hours with flexible formats (1h, 1h30m, 2h), view recent worklogs
+          grouped by day with totals, edit and delete entries, browse favorites
+          and assigned issues, smart search with auto-complete, and star
+          frequently-used issues for quick access.
+        </div>
+      </div>
+    ),
+    technologies: ['TypeScript', 'React'],
+    github: 'https://github.com/raycast/extensions/tree/main/extensions/tempo',
+    images: [
+      raycastTempo1.src,
+      raycastTempo2.src,
+      raycastTempo3.src,
+      raycastTempo4.src,
+      raycastTempo5.src,
+      raycastTempo6.src,
+      raycastTempo7.src,
+      raycastTempo8.src,
+    ],
+    website: 'https://www.raycast.com/darchen_gautier/tempo',
+  },
   /* Talk WebUSB */
   {
     key: 'talk-webusb',
