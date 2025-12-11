@@ -9,7 +9,28 @@ import WatchResourcesList from './watchResourcesList'
 
 export const revalidate = 3600
 
+async function getWatchCount(): Promise<number | undefined> {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_URL}/api/watch/count`,
+      { next: { revalidate: 3600 } },
+    )
+    if (!response.ok) {
+      console.error('Failed to fetch watch count:', response.statusText)
+      return undefined
+    }
+
+    const data = await response.json()
+    return data.totalCount
+  } catch (error) {
+    console.error('Error fetching watch count:', error)
+    return undefined
+  }
+}
+
 export default async function Page() {
+  const totalCount = await getWatchCount()
+
   return (
     <div className="flex h-full flex-col justify-center px-0 py-32 sm:px-8">
       {/* Title */}
@@ -26,7 +47,7 @@ export default async function Page() {
 
       {/* Alert block */}
       <div className="px-8 sm:px-0">
-        <IntroAlert />
+        <IntroAlert totalCount={totalCount} />
       </div>
 
       {/* Search */}
