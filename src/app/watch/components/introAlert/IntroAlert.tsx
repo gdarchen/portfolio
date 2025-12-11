@@ -1,7 +1,11 @@
 import React, { FC } from 'react'
 import { RiInformation2Fill } from 'react-icons/ri'
 
-const IntroAlert: FC = () => {
+type Props = {
+  totalCount?: number
+}
+
+const IntroAlert: FC<Props> = ({ totalCount }) => {
   return (
     <div className="flex items-center justify-center">
       <div
@@ -14,7 +18,18 @@ const IntroAlert: FC = () => {
           resources I have consulted, with a small{' '}
           <span className="italic">tl;dr</span> section.
           <br />
-          Those resources can be retrieved in this page.
+          <br />
+          {totalCount !== undefined ? (
+            <>
+              <span className="font-semibold italic">
+                {totalCount.toLocaleString()}
+              </span>{' '}
+              resources can be retrieved in this page since I started tracking
+              them in June 2024.
+            </>
+          ) : (
+            <>Those resources can be retrieved in this page.</>
+          )}
         </div>
       </div>
     </div>

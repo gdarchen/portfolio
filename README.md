@@ -42,6 +42,11 @@ Here is how to setup the project locally to contribute:
    ```env
    NOTION_TOKEN=<CHANGE_ME>
    NOTION_DATABASE_ID=<CHANGE_ME>
+   NOTION_COUNTS_DATABASE_ID=<CHANGE_ME>
+   # openssl rand -base64 32
+   CRON_SECRET=<CHANGE_ME>
+
+   NEXT_PUBLIC_URL="http://localhost:8080"
    ```
 
 4. Run the application locally:
