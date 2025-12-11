@@ -11,12 +11,11 @@ export const revalidate = 3600
 
 async function getWatchCount(): Promise<number | undefined> {
   try {
-    // Use absolute URL in production (for build time), relative in development
-    const baseUrl = process.env.NEXT_PUBLIC_URL || 'http://localhost:8080'
+    // Use Vercel's internal URL in production build, relative URL otherwise
     const url =
-      process.env.NODE_ENV === 'production'
-        ? `${baseUrl}/api/watch/count`
-        : '/api/watch/count'
+      process.env.VERCEL_URL && process.env.NODE_ENV === 'production'
+        ? `https://${process.env.VERCEL_URL}/api/watch/count`
+        : 'http://localhost:8080/api/watch/count'
 
     const response = await fetch(url, { next: { revalidate: 3600 } })
     if (!response.ok) {
