@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 
 import ArrowIcon from '@/components/icons/ArrowIcon'
 import Spinner from '@/components/spinner/Spinner'
+import { getTotalCount } from '@/lib/watchCount'
 
 import IntroAlert from './components/introAlert/IntroAlert'
 import Search from './components/search/Search'
@@ -9,30 +10,8 @@ import WatchResourcesList from './watchResourcesList'
 
 export const revalidate = 3600
 
-async function getWatchCount(): Promise<number | undefined> {
-  try {
-    // Use Vercel's internal URL in production build, relative URL otherwise
-    const url =
-      process.env.VERCEL_URL && process.env.NODE_ENV === 'production'
-        ? `https://${process.env.VERCEL_URL}/api/watch/count`
-        : 'http://localhost:8080/api/watch/count'
-
-    const response = await fetch(url, { next: { revalidate: 3600 } })
-    if (!response.ok) {
-      console.error('Failed to fetch watch count:', response.statusText)
-      return undefined
-    }
-
-    const data = await response.json()
-    return data.totalCount
-  } catch (error) {
-    console.error('Error fetching watch count:', error)
-    return undefined
-  }
-}
-
 export default async function Page() {
-  const totalCount = await getWatchCount()
+  const totalCount = await getTotalCount()
 
   return (
     <div className="flex h-full flex-col justify-center px-0 py-32 sm:px-8">
