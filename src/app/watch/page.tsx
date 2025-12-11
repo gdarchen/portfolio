@@ -11,10 +11,14 @@ export const revalidate = 3600
 
 async function getWatchCount(): Promise<number | undefined> {
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_URL}/api/watch/count`,
-      { next: { revalidate: 3600 } },
-    )
+    // Use absolute URL in production (for build time), relative in development
+    const baseUrl = process.env.NEXT_PUBLIC_URL || 'http://localhost:8080'
+    const url =
+      process.env.NODE_ENV === 'production'
+        ? `${baseUrl}/api/watch/count`
+        : '/api/watch/count'
+
+    const response = await fetch(url, { next: { revalidate: 3600 } })
     if (!response.ok) {
       console.error('Failed to fetch watch count:', response.statusText)
       return undefined
